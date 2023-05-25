@@ -1,4 +1,4 @@
-import Map from '@/Components/Map/map';
+import Map from '../Components/Map';
 import Head from 'next/head';
 
 export default function Maps() {
