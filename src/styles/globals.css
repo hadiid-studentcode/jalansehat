@@ -1,7 +1,8 @@
 /* global css atau style untuk css semua modal */
+body {
+  background-color: #f3f3f3;
+}
 
-body{
-
-    padding: 100px;
-
+.footer {
+  background-color: #4c4c6d;
 }

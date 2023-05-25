@@ -17,7 +17,10 @@
         "react/jsx-no-comment-textnodes": 0,
         "require-jsdoc": 0,
         "new-cap": 0,
-        "react/prop-types": 0
+        "react/prop-types": 0,
+        "react/no-unescaped-entities": 0,
+        "max-len": 0,
+        "no-unused-vars":0
       }
     }
   ],
