@@ -18,7 +18,14 @@ export default function NavbarComponent() {
     <>
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="mb-3">
         <Container>
-          <Navbar.Brand href="#home">Jalan Sehat</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <img
+              src='https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-new/sticker_1.png?242a2cb24c1633a650fcfca6596df2be&d=200x200'
+              height='30'
+              alt='Logo'
+              loading='lazy'
+            /> Jalan Sehat
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
