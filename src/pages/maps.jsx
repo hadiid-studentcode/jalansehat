@@ -1,4 +1,5 @@
 import Map from '../Components/Map';
+import Position from '@/Components/Position';
 import Head from 'next/head';
 
 export default function Maps() {
@@ -9,7 +10,7 @@ export default function Maps() {
       </Head>
 
 
-      <Map/>
+      <Map />
 
 
     </>

@@ -9,8 +9,9 @@ export default function NavbarComponent() {
 
   const navigation = [
     {name: 'Home', Link: '/', classLink: router.pathname === '/' ? 'nav-link active' : 'nav-link'},
-    {name: 'Maps', Link: '/maps', classLink: router.pathname === '/surat-masuk' ? 'nav-link active' : 'nav-link'},
-    {name: 'About Us', Link: '/about-us', classLink: router.pathname === '/surat-keluar' ? 'nav-link active' : 'nav-link'},
+    {name: 'Maps', Link: '/maps', classLink: router.pathname === '/maps' ? 'nav-link active' : 'nav-link'},
+    {name: 'About Us', Link: '/about', classLink: router.pathname === '/about-us' ? 'nav-link active' : 'nav-link'},
+    {name: 'Canvas', Link: '/canvas', classLink: router.pathname === '/canvas' ? 'nav-link active' : 'nav-link'},
   ];
 
 
@@ -20,8 +21,8 @@ export default function NavbarComponent() {
         <Container>
           <Navbar.Brand href="#home">
             <img
-              src='https://s3.getstickerpack.com/storage/uploads/sticker-pack/quby-new/sticker_1.png?242a2cb24c1633a650fcfca6596df2be&d=200x200'
-              height='30'
+              src='/assets/img/logo/iconjalanSehat.png'
+              height='100'
               alt='Logo'
               loading='lazy'
             /> Jalan Sehat
