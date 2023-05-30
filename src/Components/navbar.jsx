@@ -13,7 +13,6 @@ export default function NavbarComponent() {
     {name: 'Home', Link: '/', classLink: router.pathname === '/' ? 'nav-link active' : 'nav-link'},
     {name: 'Maps', Link: '/maps', classLink: router.pathname === '/maps' ? 'nav-link active' : 'nav-link'},
     {name: 'About Us', Link: '/about', classLink: router.pathname === '/about-us' ? 'nav-link active' : 'nav-link'},
-    {name: 'Canvas', Link: '/canvas', classLink: router.pathname === '/canvas' ? 'nav-link active' : 'nav-link'},
   ];
 
 
