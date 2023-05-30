@@ -18,7 +18,7 @@ export default function Maps() {
       </div>
 
       <div className='map-container'>
-        <Map/>
+        <Position />
       </div>
       <Container>
         <Row>

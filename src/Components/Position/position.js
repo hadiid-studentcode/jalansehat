@@ -34,9 +34,16 @@ export default function Position() {
 
 
     return position === null ? null : (
-      <Marker position={position}>
-        <Popup><button onClick={()=>simpan(position)}>Simpan</button></Popup>
-      </Marker>
+      <>
+        <Marker position={position}>
+          <Popup>
+            <button onClick={() => simpan(position)}>Simpan</button>
+          </Popup>
+        </Marker>
+        <Marker position={{lat: 0.4980736, lng: 101.43380}}>
+          <Popup></Popup>
+        </Marker>
+      </>
     );
   }
 
