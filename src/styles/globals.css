@@ -13,4 +13,127 @@ body {
   background-color: #4c4c6d;
 }
 
+.container-row-jumbotron{
+  margin-top: -20px;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0px;
+  /* background: #3D8361; */
+}
+
+.text-name{
+  max-width: 45%;
+  color: #3D8361;
+  font-weight: 700;
+}
+
+.text-desc{
+  max-width: 98%;
+  color: #4c4c6d;
+}
+
+.container-row{
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  /* background: #4c4c6d; */
+}
+
+.card-col{
+  background: #FFE194;
+  padding: 80px 10px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.container-name-adventags{
+  margin-top: 50px;
+  background-color: #3D8361;
+  color: #f3f3f3;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.container-row-adventags{
+  justify-content: center;
+  align-items: center;
+  background-color: #3D8361;
+  color: #f3f3f3;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+h1{
+  text-align: center;
+}
+.card-col-adventags{
+  padding-left: 50px;
+  max-width:45% ;
+}
+
+
+/* map */
+
+.header-map{
+  color: #3D8361;
+  text-align: center;
+  width: 100%;
+  margin: 50px 0;
+  padding-left: 20%;
+  padding-right: 20%;
+  align-items: center;
+  justify-content: center;
+}
+.header-map h3{
+  font-weight: 700;
+}
+.map-container{
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 20px;
+  background: #4c4c6d;
+  border-radius: 10px;
+}
+button{
+  margin-top: 20px;
+  margin-bottom: 70px;
+  border: none;
+  border-radius: 10px;
+}
+.btn-laporan {
+  background: #3D8361;
+  color: white;
+  padding: 15px 15px;
+  font-weight: 600;
+}
+
+.mark-contrainer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-right: 15% ;
+  margin-left: 15%;
+}
+.icon-red{
+  font-weight: 600;
+  color: red;
+}
+
+.icon-yellow{
+  font-weight: 600;
+  color:  #efab00;
+}
+
+.icon-blue{
+  font-weight: 600;
+  color: rgb(1, 154, 215);
+}
+
+.icon-green{
+  font-weight: 600;
+  color:  #3D8361;
+}
+
 
