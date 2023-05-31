@@ -136,4 +136,33 @@ button{
   color:  #3D8361;
 }
 
+/* Login */
+.emailForm{
+  color: #3D8361;
+}
 
+.emailInput{
+  box-sizing: border-box;
+  position: absolute;
+  width: 375px;
+  height: 35.61px;
+  left: 174px;
+  top: 306.39px;
+  background: #ffffff;
+  border: 1px solid #B4B4B4;
+}
+
+.passwordForm{
+  color: #3D8361;
+}
+
+.passwordInput{
+  box-sizing: border-box;
+  position: absolute;
+  width: 375px;
+  height: 35.61px;
+  left: 174px;
+  top: 361.09px;
+  background: #ffffff;
+  border: 1px solid #B4B4B4;
+}
