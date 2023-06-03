@@ -80,6 +80,32 @@
         justify-content: center;
         text-align: center;
       }
-      
+
+      .text-name{
+        margin-left: 0px;
+        max-width: 100%;
+        color: #3D8361;
+        font-weight: 700;
+        font-size: 36px;
+      }
+
+      .text-desc{
+        max-width: 100%;
+        color: #4c4c6d;
+        margin-left: 0px;
+        text-align: justify;
+      }
+
+      .image-colum-jum{
+        margin-top: -90px;
+        background: #4c4c6d;
+        padding: 3px;
+      }
+      .image-maps-jumbotron{
+       width: 100%;
+      }
+
 }
+
+
 

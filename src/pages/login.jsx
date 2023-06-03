@@ -34,5 +34,6 @@ export default function LoginPage() {
         </Card.Body>
       </Card>
     </Form>
+
   );
 }

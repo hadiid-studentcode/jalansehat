@@ -7,6 +7,7 @@
 
 body {
   background-color: #f3f3f3;
+  
 }
 
 .footer {
@@ -18,18 +19,23 @@ body {
   justify-content: center;
   align-items: center;
   padding: 100px 0px;
-  /* background: #3D8361; */
+  /* background: #feffd5; */
 }
 
 .text-name{
-  max-width: 45%;
+  margin-top: 10px;
+  max-width: 80%;
   color: #3D8361;
   font-weight: 700;
+  font-size: 50px;
+  margin-left: 30px;
 }
 
 .text-desc{
-  max-width: 98%;
+  max-width: 95%;
   color: #4c4c6d;
+  margin-left: 30px;
+  text-align: justify;
 }
 
 .container-row{
@@ -73,10 +79,12 @@ h1{
   max-width:45% ;
 }
 .image-colum-jum{
-  background: #3D8361;
+  background: #4c4c6d;
+  padding: 5px;
 }
 .image-maps-jumbotron{
- width: 70%;
+ width: 100%;
+
 }
 
 
