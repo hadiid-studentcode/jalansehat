@@ -1,7 +1,5 @@
-import Map from '../Components/Map';
 import Position from '@/Components/Position';
 import Head from 'next/head';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -20,10 +18,13 @@ export default function Maps() {
       <div className='map-container'>
         <Position />
       </div>
-      <Container>
-        <Row>
-          <Col className='mark-contrainer' >
+
+      {/* <div className="container-footer-map">
+        <Row className='row-footer-map'>
+          <Col sm={6} className='col-footer-map'>
             <button className='btn-laporan'>Laporkan Jalan Rusak</button>
+          </Col>
+          <Col sm={6} >
             <ul>
               <li className='icon-red'>Kerusakan Tinggi</li>
               <li className='icon-yellow'>Kerusakan Sedang</li>
@@ -32,9 +33,22 @@ export default function Maps() {
             </ul>
           </Col>
         </Row>
+      </div> */}
+      <div className="container-footer-map">
 
+        <button className='btn-laporan'>Laporkan Jalan Rusak</button>
 
-      </Container>
+        <div className="list-mark">
+          <ul>
+            <li className='icon-red'>Kerusakan Tinggi</li>
+            <li className='icon-yellow'>Kerusakan Sedang</li>
+            <li className='icon-blue'>Sedang Perbaikan</li>
+            <li className='icon-green'>Kondisi Jalan Bagus</li>
+          </ul>
+        </div>
+
+      </div>
+
 
     </>
   );

@@ -13,8 +13,8 @@ export default function Home() {
       </Head>
       <Container>
         <Row className='container-row-jumbotron'>
-          <Col sm={6}>
-            <img src="./assets/img/maps.png" alt="" />
+          <Col sm={6} className='image-colum-jum'>
+            <img className='image-maps-jumbotron' src="./assets/img/maps.png" alt="" />
             {/* <Image src='./assets/img/maps.png' alt='maps' width='100' height='100'></Image> */}
           </Col>
           <Col sm={6} className='container-colum'>

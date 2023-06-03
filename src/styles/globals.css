@@ -72,6 +72,12 @@ h1{
   padding-left: 50px;
   max-width:45% ;
 }
+.image-colum-jum{
+  background: #3D8361;
+}
+.image-maps-jumbotron{
+ width: 70%;
+}
 
 
 /* map */
@@ -89,6 +95,7 @@ h1{
 .header-map h3{
   font-weight: 700;
 }
+
 .map-container{
   margin-left: 15%;
   margin-right: 15%;
@@ -96,26 +103,21 @@ h1{
   background: #4c4c6d;
   border-radius: 10px;
 }
+
+
 button{
-  margin-top: 20px;
   margin-bottom: 70px;
   border: none;
   border-radius: 10px;
 }
-.btn-laporan {
+ .btn-laporan {
   background: #3D8361;
   color: white;
   padding: 15px 15px;
   font-weight: 600;
 }
 
-.mark-contrainer{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  margin-right: 15% ;
-  margin-left: 15%;
-}
+
 .icon-red{
   font-weight: 600;
   color: red;
@@ -136,4 +138,125 @@ button{
   color:  #3D8361;
 }
 
+.container-footer-map{
+  margin-top: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
 
+.col-footer-map{
+  border: 1px solid red;
+}
+/* Login & Register */
+
+.emailInput {
+  box-sizing: border-box;
+  margin-top: 10px;
+  height: 35.61px;
+  background: #ffffff;
+  border: 1px solid #b4b4b4;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #3d8361;
+}
+
+.passwordInput {
+  box-sizing: border-box;
+  margin-top: 10px;
+  height: 35.61px;
+
+  background: #ffffff;
+  border: 1px solid #b4b4b4;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.nameInput {
+  box-sizing: border-box;
+  margin-top: 10px;
+  height: 35.61px;
+
+  background: #ffffff;
+  border: 1px solid #b4b4b4;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.numberInput {
+  box-sizing: border-box;
+  margin-top: 10px;
+  height: 35.61px;
+
+  background: #ffffff;
+  border: 1px solid #b4b4b4;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.buttonLogin {
+  background: #1b9c85;
+  margin-top: 10px;
+}
+
+.buttonDaftar {
+  background: #1b9c85;
+}
+
+.labelLogin {
+  height: 26px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+
+  color: #1b9c85;
+}
+
+.linkDaftar {
+  width: 178px;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #333333;
+}
+
+.linkLogin {
+  width: 178px;
+  height: 25.8px;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.cardLogin {
+  margin-left: 30%;
+  margin-right: 30%;
+  justify-content: center;
+  text-align: center;
+}
