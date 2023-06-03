@@ -73,6 +73,13 @@
         margin-left: 3%;
         margin-right: 3%;
       }
+
+      .cardLogin {
+        margin-left: 5%;
+        margin-right: 5%;
+        justify-content: center;
+        text-align: center;
+      }
       
 }
 
