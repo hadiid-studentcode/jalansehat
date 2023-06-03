@@ -39,7 +39,7 @@ export default function RegisterPage() {
             />
           </Form.Group>
           <Form.Group>
-            <Button className="buttonLogin" type="submit">
+            <Button className="buttonSubmit " type="submit">
               Daftar
             </Button>
           </Form.Group>

@@ -211,9 +211,10 @@ button{
   color: #000000;
 }
 
-.buttonLogin {
+.buttonSubmit {
   background: #1b9c85;
   margin-top: 10px;
+  border: none;
 }
 
 .buttonDaftar {

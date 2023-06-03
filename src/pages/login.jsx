@@ -24,7 +24,7 @@ export default function LoginPage() {
             />
           </Form.Group>
           <Form.Group>
-            <Button className="buttonLogin" type="submit">
+            <Button className="buttonSubmit " type="submit">
               Masuk
             </Button>
           </Form.Group>
