@@ -1,3 +1,78 @@
-/* body{
-    background: red;
-} */
+@media screen and (max-width: 850px) {
+    .map-container{
+        margin-left: 3%;
+        margin-right: 3%;
+        padding: 7px;
+        background: #4c4c6d;
+        border-radius: 5px;
+      }
+
+      .header-map{
+        color: #3D8361;
+        text-align: center;
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        align-items: center;
+        justify-content: center;
+      }
+      .header-map h3{
+        font-weight: 700;
+
+      }
+      .header-map p {
+        /* text-align: justify; */
+        font-size: 12px;
+      }
+
+      button{
+        margin-top: 6px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .btn-laporan {
+        background: #3D8361;
+        color: white;
+        padding: 10px 10px;
+        font-weight: 600;
+        font-size: 10px;
+      }
+      
+
+      .icon-red{
+        font-weight: 600;
+        color: red;
+        font-size: 9px;
+        margin-right: 10px ;
+      }
+      
+      .icon-yellow{
+        font-weight: 600;
+        color:  #efab00;
+        font-size: 9px;
+        margin-right: 10px ;
+      }
+      
+      .icon-blue{
+        font-weight: 600;
+        color: rgb(1, 154, 215);
+        font-size: 9px;
+        margin-right: 10px ;
+      }
+
+      
+      .icon-green{
+        font-weight: 600;
+        color:  #3D8361;
+        font-size: 9px;
+        margin-right: 10px ;
+      }
+
+      .container-footer-map{
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+      
+}
+
