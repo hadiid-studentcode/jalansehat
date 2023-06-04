@@ -21,7 +21,8 @@
         "react/no-unescaped-entities": 0,
         "max-len": 0,
         "no-unused-vars":0,
-        "no-multiple-empty-lines":0
+        "no-multiple-empty-lines":0,
+        "react/jsx-no-undef":0
       }
     }
   ],
