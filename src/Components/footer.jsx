@@ -52,7 +52,7 @@ export default function Footer() {
           <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">Maps</a></li>
           <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">About Us</a></li>
           <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">Login</a></li>
-          <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">FAQs</a></li>
+          {/* <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">FAQs</a></li> */}
         </ul>
         <p className="text-center text-muted">&copy; 2022 Company, Inc</p>
       </footer>
