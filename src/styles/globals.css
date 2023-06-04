@@ -7,7 +7,6 @@
 
 body {
   background-color: #f3f3f3;
-  
 }
 
 .footer {
@@ -22,17 +21,16 @@ body {
   /* background: #feffd5; */
 }
 
-
-.text-name{
+.text-name {
   margin-top: 10px;
   max-width: 80%;
-  color: #3D8361;
+  color: #3d8361;
   font-weight: 700;
   font-size: 50px;
   margin-left: 30px;
 }
 
-.text-desc{
+.text-desc {
   max-width: 95%;
   color: #4c4c6d;
   margin-left: 30px;
@@ -79,13 +77,12 @@ h1 {
   padding-left: 50px;
   max-width: 45%;
 }
-.image-colum-jum{
+.image-colum-jum {
   background: #4c4c6d;
   padding: 5px;
 }
-.image-maps-jumbotron{
- width: 100%;
-
+.image-maps-jumbotron {
+  width: 100%;
 }
 
 /* map */
@@ -104,7 +101,7 @@ h1 {
   font-weight: 700;
 }
 
-.map-container{
+.map-container {
   margin-left: 15%;
   margin-right: 15%;
   padding: 20px;
@@ -112,18 +109,14 @@ h1 {
   border-radius: 10px;
 }
 
-
-
- .btn-laporan {
-  background: #3D8361;
+.btn-laporan {
+  background: #3d8361;
   color: white;
   padding: 15px 15px;
   font-weight: 600;
 }
 
-
-
-.icon-red{
+.icon-red {
   font-weight: 600;
   color: red;
 }
@@ -143,7 +136,7 @@ h1 {
   color: #3d8361;
 }
 
-.container-footer-map{
+.container-footer-map {
   margin-top: 20px;
   margin-left: 15%;
   margin-right: 15%;
@@ -152,7 +145,7 @@ h1 {
   justify-content: space-between;
 }
 
-.col-footer-map{
+.col-footer-map {
   border: 1px solid red;
 }
 /* Login & Register */
@@ -217,13 +210,9 @@ h1 {
 }
 
 .buttonSubmit {
-  background: #1b9c85;
+  background: #3d8361;
   margin-top: 10px;
   border: none;
-}
-
-.buttonDaftar {
-  background: #1b9c85;
 }
 
 .labelLogin {
@@ -235,7 +224,7 @@ h1 {
   font-size: 15px;
   line-height: 22px;
 
-  color: #1b9c85;
+  color: #3d8361;
 }
 
 .linkDaftar {
@@ -260,9 +249,49 @@ h1 {
   line-height: 18px;
 }
 
-.cardLogin {
-  margin-left: 30%;
-  margin-right: 30%;
+.container-right {
+  background: #ffffff;
   justify-content: center;
   text-align: center;
+}
+.container-left {
+  background-color: #3d8361;
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+}
+.h2-login {
+  text-align: center;
+  color: #ffffff;
+  font-size: 25px;
+}
+.p-login {
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  color: #ffffff;
+  font-size: 12px;
+}
+.img-login {
+  width: 70%;
+}
+
+.container-form {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 15%;
+}
+
+.container-img-register {
+  padding-top: 8%;
+}
+
+.container-img-login {
+  padding-top: 9%;
+}
+
+.img-login-key {
+  width: 28%;
 }
