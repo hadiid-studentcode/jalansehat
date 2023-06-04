@@ -6,6 +6,7 @@ import {useRouter} from 'next/router';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 export default function NavbarComponent() {
   const router = useRouter();
 
@@ -42,7 +43,7 @@ export default function NavbarComponent() {
             </Nav>
             <Nav>
               <li className="nav-item">
-                <Link className="nav-link" href="/login"><Button style={Object.assign({background: '#3D8361', borderRadius: 18, fontWeight: 'bold', width: 100})}>Login</Button></Link>
+                <Link className="nav-link" href="/login"><Button style={Object.assign({background: '#3D8361', borderRadius: 18, fontWeight: 'bold', width: 100, border: 'none'})}>Login</Button></Link>
               </li>
             </Nav>
           </Navbar.Collapse>
