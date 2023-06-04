@@ -1,8 +1,8 @@
 /* global css atau style untuk css semua modal */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 * {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
   background-color: #4c4c6d;
 }
 
-.container-row-jumbotron{
+.container-row-jumbotron {
   margin-top: -20px;
   justify-content: center;
   align-items: center;
@@ -21,18 +21,18 @@ body {
   /* background: #3D8361; */
 }
 
-.text-name{
+.text-name {
   max-width: 45%;
-  color: #3D8361;
+  color: #3d8361;
   font-weight: 700;
 }
 
-.text-desc{
+.text-desc {
   max-width: 98%;
   color: #4c4c6d;
 }
 
-.container-row{
+.container-row {
   margin-top: 10px;
   justify-content: center;
   align-items: center;
@@ -40,8 +40,8 @@ body {
   /* background: #4c4c6d; */
 }
 
-.card-col{
-  background: #FFE194;
+.card-col {
+  background: #ffe194;
   padding: 80px 10px;
   justify-content: center;
   text-align: center;
@@ -49,35 +49,34 @@ body {
   border-radius: 10px;
 }
 
-.container-name-adventags{
+.container-name-adventags {
   margin-top: 50px;
-  background-color: #3D8361;
+  background-color: #3d8361;
   color: #f3f3f3;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 50px;
 }
-.container-row-adventags{
+.container-row-adventags {
   justify-content: center;
   align-items: center;
-  background-color: #3D8361;
+  background-color: #3d8361;
   color: #f3f3f3;
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
-h1{
+h1 {
   text-align: center;
 }
-.card-col-adventags{
+.card-col-adventags {
   padding-left: 50px;
-  max-width:45% ;
+  max-width: 45%;
 }
-
 
 /* map */
 
-.header-map{
-  color: #3D8361;
+.header-map {
+  color: #3d8361;
   text-align: center;
   width: 100%;
   margin: 50px 0;
@@ -86,83 +85,163 @@ h1{
   align-items: center;
   justify-content: center;
 }
-.header-map h3{
+.header-map h3 {
   font-weight: 700;
 }
-.map-container{
+.map-container {
   margin-left: 15%;
   margin-right: 15%;
   padding: 20px;
   background: #4c4c6d;
   border-radius: 10px;
 }
-button{
-  margin-top: 20px;
+button {
+  /* margin-top: 20px;
   margin-bottom: 70px;
   border: none;
-  border-radius: 10px;
+  border-radius: 10px; */
 }
 .btn-laporan {
-  background: #3D8361;
+  background: #3d8361;
   color: white;
   padding: 15px 15px;
   font-weight: 600;
 }
 
-.mark-contrainer{
+.mark-contrainer {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  margin-right: 15% ;
+  margin-right: 15%;
   margin-left: 15%;
 }
-.icon-red{
+.icon-red {
   font-weight: 600;
   color: red;
 }
 
-.icon-yellow{
+.icon-yellow {
   font-weight: 600;
-  color:  #efab00;
+  color: #efab00;
 }
 
-.icon-blue{
+.icon-blue {
   font-weight: 600;
   color: rgb(1, 154, 215);
 }
 
-.icon-green{
+.icon-green {
   font-weight: 600;
-  color:  #3D8361;
+  color: #3d8361;
 }
 
-/* Login */
-.emailForm{
-  color: #3D8361;
-}
+/* Login & Register */
 
-.emailInput{
+.emailInput {
   box-sizing: border-box;
-  position: absolute;
-  width: 375px;
+  margin-top: 10px;
   height: 35.61px;
-  left: 174px;
-  top: 306.39px;
   background: #ffffff;
-  border: 1px solid #B4B4B4;
+  border: 1px solid #b4b4b4;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #3d8361;
 }
 
-.passwordForm{
-  color: #3D8361;
-}
-
-.passwordInput{
+.passwordInput {
   box-sizing: border-box;
-  position: absolute;
-  width: 375px;
+  margin-top: 10px;
   height: 35.61px;
-  left: 174px;
-  top: 361.09px;
+
   background: #ffffff;
-  border: 1px solid #B4B4B4;
+  border: 1px solid #b4b4b4;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.nameInput {
+  box-sizing: border-box;
+  margin-top: 10px;
+  height: 35.61px;
+
+  background: #ffffff;
+  border: 1px solid #b4b4b4;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.numberInput {
+  box-sizing: border-box;
+  margin-top: 10px;
+  height: 35.61px;
+
+  background: #ffffff;
+  border: 1px solid #b4b4b4;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.buttonLogin {
+  background: #1b9c85;
+  margin-top: 10px;
+}
+
+.buttonDaftar {
+  background: #1b9c85;
+}
+
+.labelLogin {
+  height: 26px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+
+  color: #1b9c85;
+}
+
+.linkDaftar {
+  width: 178px;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #333333;
+}
+
+.linkLogin {
+  width: 178px;
+  height: 25.8px;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.cardLogin {
+  margin-left: 30%;
+  margin-right: 30%;
+  justify-content: center;
+  text-align: center;
 }
