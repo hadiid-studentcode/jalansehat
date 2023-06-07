@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-undef */
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
@@ -22,33 +21,25 @@ function LocationMarker({posisi, onPositionChange}) {
 
   const map = useMapEvents({
     click(e) {
-      console.log(e.latlng);
       setPosition(e.latlng);
       onPositionChange(e.latlng);
     },
     dblclick(e) {
       map.locate();
     },
-    // contextmenu(e) {
-    //   console.log(e.latlng);
-    //   setPosition(e.latlng);
-    // },
+
     locationfound(e) {
       map.flyTo(e.latlng, map.getZoom());
     },
   });
 
-  const simpan = (value) => {
-    console.log(`${value.lat} dan ${value.lng}`);
-  };
+
 
   return position === null ? null : (
     <>
       <Marker position={position}>
         <Popup>
-          <button className="btn btn-primary" onClick={() => simpan(position)}>
-            Simpan
-          </button>
+        hai aku disini
         </Popup>
       </Marker>
     </>
@@ -62,8 +53,6 @@ export default function Position({posisi1, onPositionChange1}) {
   const handlePositionChange = (newPosition) => {
     setPosition(newPosition);
     onPositionChange1(newPosition);
-
-    console.log(`lat: ${newPosition.lat}, lng: ${newPosition.lng}`);
   };
   return (
     <MapContainer
