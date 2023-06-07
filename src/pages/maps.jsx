@@ -9,13 +9,18 @@ import Modal from 'react-bootstrap/Modal';
 export default function Maps() {
   const [position, setPosition] = useState(null);
   const [show, setShow] = useState(false);
+  const [damageType, setDamageType] = useState(null);
+  const [locationLat, setLocationLat] = useState(null);
+  const [locationLng, setLocationLng] = useState(null);
+  const [name, setName] = useState(null);
+  const [report, setReport] = useState(null);
 
   const handlePositionChange1 = (newPosition1) => {
     setPosition(newPosition1);
   };
 
-  let Latitude = null;
-  let Longitude = null;
+  let Latitude = '';
+  let Longitude = '';
 
   if (position) {
     Latitude = position.lat;
@@ -31,7 +36,16 @@ export default function Maps() {
   // submit form report
   const handleSendReport = (e) => {
     e.preventDefault();
-    console.log(e);
+    console.log(e.target.damageType.value);
+    console.log(e.target.locationLat.value);
+    console.log(e.target.locationLng.value);
+    console.log(e.target.name.value);
+    console.log(e.target.report.value);
+    window.location.reload(true);
+  };
+
+  const handleChange = (e) => {
+
   };
 
 
@@ -61,29 +75,55 @@ export default function Maps() {
           </Modal.Header>
           <Modal.Body>
             <Form onSubmit={handleSendReport} method='POST'>
-              <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="name@example.com"
-                  autoFocus
-                />
+              <Form.Group className="mb-3" id="exampleForm.ControlInput1">
+                <Form.Label>Jenis Kerusakan</Form.Label>
+                <Form.Select aria-label="Default select example" onChange={handleChange} id='damageType' name='damageType' required>
+                  <option>Pilih Jenis Kerusakan</option>
+                  <option value="Kerusakan Tinggi">Kerusakan Tinggi</option>
+                  <option value="Kerusakan Sedang">Kerusakan Sedang</option>
+                  <option value="Sedang Perbaikan">Sedang Perbaikan</option>
+                  <option value="Kondisi Jalan Bagus">Kondisi Jalan Bagus</option>
+                </Form.Select>
               </Form.Group>
               <Form.Group
                 className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
+                id="exampleForm.ControlTextarea1"
               >
-                <Form.Label>Example textarea</Form.Label>
-                <Form.Control as="textarea" rows={3} />
+                <Form.Label>Titik Lokasi Latitude
+                </Form.Label>
+                <Form.Control type="text" disabled value={Latitude} onChange={handleChange} required id='locationLat' name='locationLat' />
               </Form.Group>
+              <Form.Group
+                className="mb-3"
+                id="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Titik Lokasi Longitude
+                </Form.Label>
+                <Form.Control type="text" disabled value={Longitude} onChange={handleChange} required id='locationLng' name='locationLng' />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                id="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Nama Pelapor
+                </Form.Label>
+                <Form.Control type="text" onChange={handleChange} placeholder="Nama Pelapor" required name='name' id='name'/>
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                id="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Isi Laporan</Form.Label>
+                <Form.Control as="textarea" rows={3} onChange={handleChange} placeholder="Silahkan isikan Laporan dengan benar dan valid" required name='report' id='report' />
+              </Form.Group>
+              <Button type='submit' variant="primary">
+                Save Changes
+              </Button>
             </Form>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
               Close
-            </Button>
-            <Button type='submit' variant="primary">
-              Save Changes
             </Button>
           </Modal.Footer>
         </Modal>
