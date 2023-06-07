@@ -71,7 +71,7 @@ export default function Maps() {
         {/* modal */}
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>Laporkan Jalan Rusak</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form onSubmit={handleSendReport} method='POST'>
