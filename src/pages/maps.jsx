@@ -2,8 +2,17 @@ import Position from '@/Components/Position';
 import Head from 'next/head';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import {useState} from 'react';
+
 
 export default function Maps() {
+  const [position, setPosition] = useState(null);
+
+  const handlePositionChange1 = (newPosition1) => {
+    setPosition(newPosition1);
+
+    console.log(`lat maps: ${newPosition1.lat}, lng maps: ${newPosition1.lng}`);
+  };
   return (
     <>
       <Head>
@@ -16,7 +25,7 @@ export default function Maps() {
       </div>
 
       <div className='map-container'>
-        <Position />
+        <Position onPositionChange1={handlePositionChange1} />
       </div>
 
       {/* <div className="container-footer-map">
