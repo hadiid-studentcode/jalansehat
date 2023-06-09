@@ -1,61 +1,67 @@
-import Card from 'react-bootstrap/Card';
+/* import Card from 'react-bootstrap/Card';
 import React from 'react';
-/* Nemu di GitHub */
-/* export default function Footer() {
+import Nav from 'react-bootstrap/Nav';
+import {useRouter} from 'next/router';
+import Link from 'next/link';
+
+export default function Footer() {
+  const router = useRouter();
+
+  const footer = [
+    {name: 'Home', Link: '/', classLink: router.pathname === '/' ? 'nav-link active' : 'nav-link'},
+    {name: 'Maps', Link: '/maps', classLink: router.pathname === '/surat-masuk' ? 'nav-link active' : 'nav-link'},
+    {name: 'About Us', Link: '/about', classLink: router.pathname === '/surat-keluar' ? 'nav-link active' : 'nav-link'},
+  ];
   return (
     <>
-      <Card body className='text-center'>This is some text within a card body.
-      import React from "react"
-      <footer className="page-footer font-small blue pt-4">
-        <div className="container-fluid text-center text-md-left">
-          <div className="row">
-            <div className="col-md-6 mt-md-0 mt-3">
-              <h5 className="text-uppercase">Footer Content</h5>
-              <p>Here you can use rows and columns to organize your footer content.</p>
-            </div>
-
-            <hr className="clearfix w-100 d-md-none pb-0"/>
-
-            <div className="col-md-3 mb-md-0 mb-3">
-              <h5 className="text-uppercase">Resources</h5>
-              <ul className="list-unstyled">
-                <li><a href="#!">Link 1</a></li>
-                <li><a href="#!">Link 2</a></li>
-                <li><a href="#!">Link 3</a></li>
-                <li><a href="#!">Link 4</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="footer-copyright text-center py-3">© 2020 Copyright:
-          <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-        </div>
-
-      </footer>
-
-export default Footer
-      </Card>
-
-
+      <div className="m-auto">
+        <ul>
+          {footer.map((item) => (
+            <li key={item.name} className="nav-item">
+              <Link className={`${item.classLink}`} href={item.Link}>{item.name}</Link>
+            </li>
+          ))}
+        </ul>
+        <p className="text-center text-muted">&copy; 2022 Company, Inc</p>
+      </div>
     </>
+
   );
 }
  */
 
-export default function Footer() {
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Link from 'next/link';
+import {useRouter} from 'next/router';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+export default function FooterComponent() {
+  const router = useRouter();
+
+  const footerNavigation = [
+    {name: 'Home', Link: '/', classLink: router.pathname === '/' ? 'nav-link active' : 'nav-link'},
+    {name: 'Maps', Link: '/maps', classLink: router.pathname === '/surat-masuk' ? 'nav-link active' : 'nav-link'},
+    {name: 'About Us', Link: '/about', classLink: router.pathname === '/surat-keluar' ? 'nav-link active' : 'nav-link'},
+  ];
+
   return (
-    <div className="container">
-      <footer className="py-3 my-4">
-        <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-          <li className="nav-item"><a href="about-us.jsx" className="nav-link px-2 text-muted">Home</a></li>
-          <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">Maps</a></li>
-          <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">About Us</a></li>
-          <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">Login</a></li>
-          <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">FAQs</a></li>
-        </ul>
-        <p className="text-center text-muted">&copy; 2022 Company, Inc</p>
-      </footer>
-    </div>
+    <>
+      <Navbar collapseOnSelect>
+        <Container fluid style={Object.assign({fontWeight: 'normal', fontSize: '12px'})}>
+          <Nav className="m-auto">
+            <ul className="navbar-nav">
+              {footerNavigation.map((item) => (
+                <li key={item.name} className="nav-item">
+                  <Link className={`${item.classLink} mb-0 pb-0`} href={item.Link}>{item.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </Nav>
+        </Container>
+      </Navbar>
+      <p style={Object.assign({fontWeight: 'normal', fontSize: '12px'})} className="text-center text-muted">&copy; 2023 Jalan Sehat</p>
+    </>
   );
 }
