@@ -54,13 +54,14 @@ export default function FooterComponent() {
             <ul className="navbar-nav">
               {footerNavigation.map((item) => (
                 <li key={item.name} className="nav-item">
-                  <Link className={`${item.classLink}`} href={item.Link}>{item.name}</Link>
+                  <Link className={`${item.classLink} mb-0 pb-0`} href={item.Link}>{item.name}</Link>
                 </li>
               ))}
             </ul>
           </Nav>
         </Container>
       </Navbar>
+      <p style={Object.assign({fontWeight: 'normal', fontSize: '12px'})} className="text-center text-muted">&copy; 2023 Jalan Sehat</p>
     </>
   );
 }

@@ -46,7 +46,7 @@ export default function AboutUs() {
               return (
                 <Col md={3} key={teams.id} className="justify-content-md-center">
                   <Figure>
-                    <Figure.Image
+                    <Figure.Image rounded
                       width={250}
                       alt={teams.name}
                       src={teams.image}
