@@ -15,9 +15,9 @@ import {
 import {useState} from 'react';
 import {useMapEvents} from 'react-leaflet/hooks';
 
-
 function LocationMarker({posisi, onPositionChange}) {
   const [position, setPosition] = useState(null);
+  const [positionNow, setPositionNow] = useState(null);
 
   const map = useMapEvents({
     click(e) {
@@ -29,23 +29,27 @@ function LocationMarker({posisi, onPositionChange}) {
     },
 
     locationfound(e) {
+      setPositionNow(e.latlng);
+
       map.flyTo(e.latlng, map.getZoom());
     },
   });
 
-
-
-  return position === null ? null : (
+  return position === null || positionNow === null ? null : (
     <>
+      <LayerGroup>
+        <Marker position={positionNow}>
+          <Popup>hai aku disini</Popup>
+        </Marker>
+        <Circle center={positionNow} pathOptions="blue" radius={500} />
+      </LayerGroup>
+
       <Marker position={position}>
-        <Popup>
-        hai aku disini
-        </Popup>
+        <Popup>tag disini aja yaa</Popup>
       </Marker>
     </>
   );
 }
-
 
 export default function Position({posisi1, onPositionChange1}) {
   const [position, setPosition] = useState(null);
