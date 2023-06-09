@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
@@ -15,9 +16,10 @@ import {
 import {useState} from 'react';
 import {useMapEvents} from 'react-leaflet/hooks';
 
-
-function LocationMarker({posisi, onPositionChange}) {
+function LocationMarker({posisi, onPositionChange, onReport}) {
   const [position, setPosition] = useState(null);
+  const [positionNow, setPositionNow] = useState(null);
+  const [reports, setReports] = useState(onReport);
 
   const map = useMapEvents({
     click(e) {
@@ -29,26 +31,40 @@ function LocationMarker({posisi, onPositionChange}) {
     },
 
     locationfound(e) {
+      setPositionNow(e.latlng);
+
       map.flyTo(e.latlng, map.getZoom());
     },
   });
 
-
-
-  return position === null ? null : (
+  return position === null || positionNow === null ? null : (
     <>
+      <LayerGroup>
+        <Marker position={positionNow}>
+          <Popup>hai aku disini</Popup>
+        </Marker>
+        <Circle center={positionNow} pathOptions="blue" radius={500} />
+      </LayerGroup>
+
       <Marker position={position}>
-        <Popup>
-        hai aku disini
-        </Popup>
+        <Popup>tag disini aja yaa</Popup>
       </Marker>
+
+      {
+        // Render hasil pencarian jika data tersedia
+        reports.map((r) => (
+          <Marker key={r.id} position={[r.latitude, r.longitude]}>
+            <Popup>{r.message}</Popup>
+          </Marker>
+        ))
+      }
     </>
   );
 }
 
-
-export default function Position({posisi1, onPositionChange1}) {
+export default function Position({posisi1, onPositionChange1, onReport}) {
   const [position, setPosition] = useState(null);
+  const [report, setReport] = useState(onReport);
 
   const handlePositionChange = (newPosition) => {
     setPosition(newPosition);
@@ -66,7 +82,7 @@ export default function Position({posisi1, onPositionChange1}) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      <LocationMarker onPositionChange={handlePositionChange} />
+      <LocationMarker onPositionChange={handlePositionChange} onReport={report} />
     </MapContainer>
   );
 }

@@ -22,8 +22,8 @@
         "max-len": 0,
         "no-unused-vars":0,
         "no-multiple-empty-lines":0,
-        "react/jsx-no-undef":0
-      }
+        "next-line indent":0
+            }
     }
   ],
   "parserOptions": {
@@ -33,5 +33,8 @@
   "plugins": ["react"],
 
   //   membuat aturan secara global
-  "rules": {}
+  "rules": {
+    "linebreak-style" : 0,
+    "max-len":0
+  }
 }

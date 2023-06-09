@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+import {supabase} from '../../lib/supabaseClient';
 import Position from '@/Components/Position';
 import Head from 'next/head';
 import {useState} from 'react';
@@ -6,14 +8,13 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
 
-export default function Maps() {
+export default function Maps({reports}) {
   const [position, setPosition] = useState(null);
   const [show, setShow] = useState(false);
-  const [damageType, setDamageType] = useState(null);
-  const [locationLat, setLocationLat] = useState(null);
-  const [locationLng, setLocationLng] = useState(null);
-  const [name, setName] = useState(null);
-  const [report, setReport] = useState(null);
+  const [report, setReport] = useState(reports);
+
+
+
 
   const handlePositionChange1 = (newPosition1) => {
     setPosition(newPosition1);
@@ -34,13 +35,31 @@ export default function Maps() {
   // end modal
 
   // submit form report
-  const handleSendReport = (e) => {
+  const handleSendReport = async (e) => {
     e.preventDefault();
-    console.log(e.target.damageType.value);
-    console.log(e.target.locationLat.value);
-    console.log(e.target.locationLng.value);
-    console.log(e.target.name.value);
-    console.log(e.target.report.value);
+
+    const {data, error} = await supabase
+        .from('reports')
+        .insert([
+          {
+            nama: e.target.name.value,
+            jenisKerusakan: e.target.damageType.value,
+            latitude: e.target.locationLat.value,
+            longitude: e.target.locationLng.value,
+            message: e.target.message.value,
+            status: 'diterima',
+
+          },
+        ]);
+
+    if (error) {
+      console.log(error);
+    } else {
+      alert('Laporan berhasil disimpan !');
+    }
+
+
+
     window.location.reload(true);
   };
 
@@ -62,7 +81,7 @@ export default function Maps() {
       </div>
 
       <div className='map-container'>
-        <Position onPositionChange1={handlePositionChange1} />
+        <Position onPositionChange1={handlePositionChange1} onReport={report} />
       </div>
 
       <div className="container-footer-map">
@@ -75,6 +94,14 @@ export default function Maps() {
           </Modal.Header>
           <Modal.Body>
             <Form onSubmit={handleSendReport} method='POST'>
+              <Form.Group
+                className="mb-3"
+                id="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Nama Pelapor
+                </Form.Label>
+                <Form.Control type="text" onChange={handleChange} placeholder="Nama Pelapor" required name='name' id='name' />
+              </Form.Group>
               <Form.Group className="mb-3" id="exampleForm.ControlInput1">
                 <Form.Label>Jenis Kerusakan</Form.Label>
                 <Form.Select aria-label="Default select example" onChange={handleChange} id='damageType' name='damageType' required>
@@ -105,16 +132,8 @@ export default function Maps() {
                 className="mb-3"
                 id="exampleForm.ControlTextarea1"
               >
-                <Form.Label>Nama Pelapor
-                </Form.Label>
-                <Form.Control type="text" onChange={handleChange} placeholder="Nama Pelapor" required name='name' id='name'/>
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                id="exampleForm.ControlTextarea1"
-              >
                 <Form.Label>Isi Laporan</Form.Label>
-                <Form.Control as="textarea" rows={3} onChange={handleChange} placeholder="Silahkan isikan Laporan dengan benar dan valid" required name='report' id='report' />
+                <Form.Control as="textarea" rows={3} onChange={handleChange} placeholder="Silahkan isikan Laporan dengan benar dan valid" required name='message' id='message' />
               </Form.Group>
               <Button type='submit' variant="primary">
                 Save Changes
@@ -143,4 +162,19 @@ export default function Maps() {
 
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const {data: reports, error} = await supabase
+      .from('reports')
+      .select('id,jenisKerusakan,latitude,longitude,message,status')
+      .eq('status', 'diterima');
+
+
+
+  return {
+    props: {
+      reports: reports,
+    }, // will be passed to the page component as props
+  };
 }
