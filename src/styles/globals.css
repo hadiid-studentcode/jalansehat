@@ -17,7 +17,7 @@ body {
   margin-top: -20px;
   justify-content: center;
   align-items: center;
-  padding: 100px 0px;
+  padding: 100px 20px 60px 20px;
   /* background: #feffd5; */
 }
 
@@ -26,7 +26,7 @@ body {
   max-width: 80%;
   color: #3d8361;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 30px;
   margin-left: 30px;
 }
 
@@ -47,35 +47,31 @@ body {
 
 .card-col {
   background: #ffe194;
-  padding: 80px 10px;
+  padding: 60px 10px;
   justify-content: center;
   text-align: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 20px;
+  margin: 10px;
 }
 
 .container-name-adventags {
   margin-top: 50px;
-  background-color: #3d8361;
-  color: #f3f3f3;
+  color: #4C4C6D;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding: 20px;
 }
 .container-row-adventags {
   justify-content: center;
   align-items: center;
-  background-color: #3d8361;
-  color: #f3f3f3;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
+  color: #4C4C6D;
 }
 h1 {
   text-align: center;
 }
 .card-col-adventags {
-  padding-left: 50px;
   max-width: 45%;
+  padding: 2%;
 }
 .image-colum-jum {
   background: #4c4c6d;

@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'next/image';
 import Carousel from 'react-bootstrap/Carousel';
+import React from 'react';
 
 export default function Home() {
   return (
@@ -12,96 +13,114 @@ export default function Home() {
       <Head>
         <title>JalanSehat | Home</title>
       </Head>
-      <Container>
-        <Row className='container-row-jumbotron pb-10'>
-          <Col xs={12} sm={12} md={12} xxl={6} className='image-colum-jum'>
-            <img className='image-maps-jumbotron' src="https://static.vecteezy.com/system/resources/previews/004/686/716/non_2x/country-map-indonesia-southeast-asia-flat-wide-background-illustration-free-vector.jpg" alt="" />
+      <Container fluid>
+        <Row className='container-row-jumbotron'>
+          <Col xs={12} sm={12} md={6} lg={6} className='image-colum-jum'>
+            <img className='image-maps-jumbotron' src="./assets/img/maps.png" alt="" />
             {/* <Image src='./assets/img/maps.png' alt='maps' width='100' height='100'></Image> */}
           </Col>
-          <Col xs={12} sm={12} md={12} xxl={6} className='container-colum'>
+          <Col xs={12} sm={12} md={6} lg={6} className='container-colum'>
             <h2 className='text-name'>SELAMAT DATANG DI JALAN SEHAT</h2>
             <p className='text-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos sed tempora voluptatem culpa dolor! Animi adipisci in illo aperiam illum, sit iste, nisi vitae repudiandae officiis cupiditate laudantium doloribus!</p>
           </Col>
         </Row>
-
         <Row className='container-row'>
-          <Col sm={6} className='container-colum'>
+          <Col xs={6} sm={6} md={4} className='container-colum'>
             <img
               src='./assets/img/img-1.png'
-              className='img-fluid shadow-2-strong rounded'
+              className='img-fluid shadow-2-strong pl-5'
               alt='Image'
-              style={{width: 400}}
+              style={{width: 350}}
             />
           </Col>
-          <Col sm={6} className='card-col mt-2'>
+          <Col xs={6} sm={6} md={4} className='card-col'>
             <p><b>Jalan Sehat</b> adalah sistem informasi geografis yang menyajikan data spasial mengenai kondisi jalan yang diklasifikasikan berdasarkan tingkat kerusakannya.</p>
           </Col>
         </Row>
-        <Row className='container-name-adventags'>
-          <Col>
-            <h1>Keunggulan Jalan Sehat</h1>
-          </Col>
-        </Row>
-        <Row className='container-row-adventags'>
-          <Col sm={6} className='card-col-adventags'>
-            <h3>Fleksibel</h3>
-            <p>Dapat diakses oleh siapa saja dan dimana saja.</p>
+        <div className='p-0 m-0' style={Object.assign({background: 'rgb(196,221,209)', background: 'linear-gradient(360deg, rgba(196,221,209,1) 0%, rgba(233,246,240,1) 47%, rgba(237,245,241,1) 76%, rgba(243,243,243,1) 100%'})}>
+          <Row className='container-name-adventags'>
+            <Col>
+              <h1>Keunggulan Jalan Sehat</h1>
+            </Col>
+          </Row>
+          <Row className='container-row-adventags' style={Object.assign({background: 'rgb(196,221,209)', background: 'linear-gradient(360deg, rgba(196,221,209,1) 0%, rgba(233,246,240,1) 47%, rgba(237,245,241,1) 76%, rgba(243,243,243,1) 100%'})}>
+            <Col xs={10} sm={6} md={5} className='card-col-adventags'>
+              <h3>Fleksibel</h3>
+              <p>Dapat diakses oleh siapa saja dan dimana saja.</p>
 
-            <h3>Data Realtime</h3>
-            <p>Temukan posisi Anda secara langsung dan pilih rute jalan terbaik yang Anda inginkan.</p>
+              <h3>Data Realtime</h3>
+              <p>Temukan posisi Anda secara langsung dan pilih rute jalan terbaik yang Anda inginkan.</p>
 
-            <h3>Laporkan Kerusakan Jalan</h3>
-            <p>Informasikan kondisi ataupun kerusakan jalan dengan mudah dengan fitur <b>Laporkan Jalan Rusak</b>.</p>
-          </Col>
-          <Col sm={6} className='container-colum'>
-            <img
-              src='https://static.vecteezy.com/system/resources/previews/011/996/750/non_2x/smartphone-and-route-pin-coordinates-in-the-maps-application-coordinate-pins-mobile-phone-gps-map-navigation-3d-illustration-free-png.png' // https://static.vecteezy.com/system/resources/previews/001/265/747/non_2x/blue-pin-in-showing-location-on-white-map-vector.jpg
-              className='img-fluid shadow-2-strong rounded'
-              alt='Image'
-              style={{width: 500}}
-            />
-          </Col>
-        </Row>
+              <h3>Laporkan Kerusakan Jalan</h3>
+              <p>Informasikan kondisi ataupun kerusakan jalan dengan mudah dengan fitur <b>Laporkan Jalan Rusak</b>.</p>
+            </Col>
+            <Col xs={10} sm={6} md={5} className='container-colum'>
+              <img
+                src='./assets/img/phone-holding.png' // https://static.vecteezy.com/system/resources/previews/001/265/747/non_2x/blue-pin-in-showing-location-on-white-map-vector.jpg
+                className='img-fluid shadow-2-strong rounded'
+                alt='Image'
+                style={{width: 600}}
+              />
+            </Col>
+          </Row>
+        </div>
       </Container>
     </>
   );
 }
 
-/*       <Carousel>
-        <Carousel.Item className="m-0 p-0" zindex={1000}>
-          <img
-            className="d-block w-100"
-            src="https://cdn-image.hipwee.com/wp-content/uploads/2017/07/hipwee-Perbaikan-Jalan-Rusak.jpg"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>Perbaikan Jalan</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://static.vecteezy.com/system/resources/previews/004/686/716/non_2x/country-map-indonesia-southeast-asia-flat-wide-background-illustration-free-vector.jpg"
-            alt="Second slide"
-          />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://static.vecteezy.com/system/resources/previews/004/686/716/non_2x/country-map-indonesia-southeast-asia-flat-wide-background-illustration-free-vector.jpg"
-            alt="Third slide"
-          />
+/* <Carousel>
+<Carousel.Item className="m-0 p-0" zindex={1000}>
+  <img
+    className="d-block w-100"
+    src="https://static.vecteezy.com/system/resources/previews/004/686/710/non_2x/green-color-country-map-indonesia-southeast-asia-flat-wide-background-illustration-free-vector.jpg"
+    alt="First slide"
+  />
+  <Carousel.Caption>
+    <h3>Perbaikan Jalan</h3>
+    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+  </Carousel.Caption>
+</Carousel.Item>
+<Carousel.Item>
+  <img
+    className="d-block w-100"
+    src="https://static.vecteezy.com/system/resources/previews/004/686/716/non_2x/country-map-indonesia-southeast-asia-flat-wide-background-illustration-free-vector.jpg"
+    alt="Third slide"
+  />
+  <Carousel.Caption>
+    <h3>Third slide label</h3>
+    <p>
+    Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+    </p>
+  </Carousel.Caption>
+</Carousel.Item>
+</Carousel> */
+/*
+        <div className='p-0 m-0' style={Object.assign({background: 'rgb(196,221,209)', background: 'linear-gradient(360deg, rgba(196,221,209,1) 0%, rgba(233,246,240,1) 47%, rgba(237,245,241,1) 76%, rgba(243,243,243,1) 100%'})}>
+          <Row className='container-name-adventags'>
+            <Col>
+              <h1>Keunggulan Jalan Sehat</h1>
+            </Col>
+          </Row>
+          <Row className='container-row-adventags'>
+            <Col xs={6} sm={6} md={4} className='card-col-adventags'>
+              <h3>Fleksibel</h3>
+              <p>Dapat diakses oleh siapa saja dan dimana saja.</p>
 
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel> */
+              <h3>Data Realtime</h3>
+              <p>Temukan posisi Anda secara langsung dan pilih rute jalan terbaik yang Anda inginkan.</p>
+
+              <h3>Laporkan Kerusakan Jalan</h3>
+              <p>Informasikan kondisi ataupun kerusakan jalan dengan mudah dengan fitur <b>Laporkan Jalan Rusak</b>.</p>
+            </Col>
+            <Col xs={6} sm={6} md={4} className='container-colum'>
+              <img
+                src='./assets/img/phone-holding.png' // https://static.vecteezy.com/system/resources/previews/001/265/747/non_2x/blue-pin-in-showing-location-on-white-map-vector.jpg
+                className='img-fluid shadow-2-strong rounded'
+                alt='Image'
+                style={{width: 600}}
+              />
+            </Col>
+          </Row>
+        </div>
+         */
