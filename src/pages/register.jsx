@@ -19,8 +19,8 @@ export default function RegisterPage() {
               />
               <h2 className="h2-login">Holla, come join us!</h2>
               <p className="p-login">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Maecenas porttitor congue massa.
+                Mari berkontribusi untuk memberikan Jalan yang sehat untuk
+                Indonesia.
               </p>
             </div>
           </Col>
