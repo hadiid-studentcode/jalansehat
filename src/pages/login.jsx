@@ -25,7 +25,7 @@ export default function LoginPage() {
               </p>
             </div>
           </Col>
-          <Col xs={12} sm={12} md={12} xxl={6} className="container-right">
+          <Col xs={12} sm={12} md={8} xxl={6} className="container-right">
             <div className="container-form">
               <img
                 className="img-login-key"

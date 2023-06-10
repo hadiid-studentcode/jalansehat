@@ -10,7 +10,7 @@ export default function RegisterPage() {
     <Form>
       <Container>
         <Row className="container-row-register">
-          <Col xs={12} sm={12} md={12} xxl={6} className="container-left">
+          <Col xs={12} sm={12} md={8} xxl={6} className="container-left">
             <div className="container-img-register">
               <img
                 className="img-login"
