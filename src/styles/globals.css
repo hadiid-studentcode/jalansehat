@@ -81,69 +81,7 @@ h1 {
   width: 100%;
 }
 
-/* map */
 
-.header-map {
-  color: #3d8361;
-  text-align: center;
-  width: 100%;
-  margin: 50px 0;
-  padding-left: 20%;
-  padding-right: 20%;
-  align-items: center;
-  justify-content: center;
-}
-.header-map h3 {
-  font-weight: 700;
-}
-
-.map-container {
-  margin-left: 15%;
-  margin-right: 15%;
-  padding: 20px;
-  background: #4c4c6d;
-  border-radius: 10px;
-}
-
-.btn-laporan {
-  background: #3d8361;
-  color: white;
-  padding: 15px 15px;
-  font-weight: 600;
-}
-
-.icon-red {
-  font-weight: 600;
-  color: red;
-}
-
-.icon-yellow {
-  font-weight: 600;
-  color: #efab00;
-}
-
-.icon-blue {
-  font-weight: 600;
-  color: rgb(1, 154, 215);
-}
-
-.icon-green {
-  font-weight: 600;
-  color: #3d8361;
-}
-
-.container-footer-map {
-  margin-top: 20px;
-  margin-left: 15%;
-  margin-right: 15%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.col-footer-map {
-  border: 1px solid red;
-}
 /* Login & Register */
 
 .emailInput {
@@ -290,4 +228,47 @@ h1 {
 
 .img-login-key {
   width: 28%;
+}
+
+
+/* BEGIN MAPS */
+.row-container-maps {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.row-container-maps .col-maps-left {
+  padding: 15px;
+  background: #4c4c6d;
+}
+
+
+.row-container-maps .col-maps-right h3 {
+  color: #3d8361;
+  font-weight: 800;
+  font-size: 35px;
+  text-align: justify;
+}
+
+.row-container-maps .col-maps-right p {
+  color: #4c4c6d;
+  text-align: justify;
+}
+
+.img-maps-logo {
+  width: 40%;
+}
+
+.btn-laporan {
+  background: #3d8361;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 0%;
+}
+
+.btn-laporan:hover {
+  background: #4c4c6d;
+}
+.mark-color {
+  margin-top: -12px;
+  font-size: 14px;
 }
