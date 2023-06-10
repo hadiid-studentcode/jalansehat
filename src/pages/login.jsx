@@ -11,7 +11,7 @@ export default function LoginPage() {
     <Form>
       <Container>
         <Row className="container-row-login">
-          <Col xs={12} sm={12} md={12} xxl={6} className="container-left">
+          <Col xs={12} sm={12} md={6} xxl={6} className="container-left">
             <div className="container-img-login">
               <img
                 className="img-login"
@@ -24,7 +24,7 @@ export default function LoginPage() {
               </p>
             </div>
           </Col>
-          <Col xs={12} sm={12} md={12} xxl={6} className="container-right">
+          <Col xs={12} sm={12} md={6} xxl={6} className="container-right">
             <div className="container-form">
               <img
                 className="img-login-key"
