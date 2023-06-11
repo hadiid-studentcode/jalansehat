@@ -15,7 +15,32 @@ export default function Maps({reports}) {
   const [position, setPosition] = useState(null);
   const [show, setShow] = useState(false);
   const [report, setReport] = useState(reports);
+  const [data, setData] = useState(null);
 
+
+
+  const channel = supabase.channel('db-jalanSehat');
+
+
+  channel.on(
+      'postgres_changes',
+      {
+        event: 'INSERT',
+        schema: 'public',
+        table: 'reports',
+      },
+      (payload) => setData(payload.data),
+  );
+
+  channel.subscribe(async (status) => {
+    if (status === 'SUBSCRIBED') {
+      const res = await supabase
+          .from('reports')
+          .select('id,jenisKerusakan,latitude,longitude,message,status')
+          .eq('status', 'diterima');
+      setData(res.data);
+    }
+  });
 
 
 
@@ -61,9 +86,9 @@ export default function Maps({reports}) {
       alert('Laporan berhasil disimpan !');
     }
 
+    setShow(false);
 
-
-    window.location.reload(true);
+    // window.location.reload(true);
   };
 
   const handleChange = (e) => {
@@ -77,11 +102,12 @@ export default function Maps({reports}) {
         <title>JalanSehat | Maps</title>
       </Head>
 
+
       <Container>
         <Row className="row-container-maps">
           <Col xs={12} sm={12} md={12} xxl={8} className="col-maps-left">
             <div>
-              <Position onPositionChange1={handlePositionChange1} />
+              <Position onPositionChange1={handlePositionChange1} onReport={report} onData={data} />
             </div>
           </Col>
           <Col xs={12} sm={12} md={12} xxl={4} className="col-maps-right">
