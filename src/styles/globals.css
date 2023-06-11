@@ -18,7 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 100px 20px 60px 20px;
-  /* background: #feffd5; */
+  background-image: url(/public/assets/img/maps.png) no-repe;
 }
 
 .text-name {
@@ -276,4 +276,12 @@ h1 {
 
 .icon-btn{
   margin-left: 10px;
+}
+
+
+
+/* jumbotron */
+.container-jumbotron{
+  background: #3d8361;
+height: 200px;
 }
