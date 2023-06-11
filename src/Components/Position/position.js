@@ -50,14 +50,14 @@ function LocationMarker({posisi, onPositionChange, onReport}) {
         <Popup>tag disini aja yaa</Popup>
       </Marker>
 
-      {/* {
+      {
         // Render hasil pencarian jika data tersedia
         reports.map((r) => (
           <Marker key={r.id} position={[r.latitude, r.longitude]}>
             <Popup>{r.message}</Popup>
           </Marker>
         ))
-      } */}
+      }
     </>
   );
 }
