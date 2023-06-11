@@ -111,7 +111,7 @@ export default function Maps({reports}) {
 
 
       {/* modal */}
-      {/* <Modal show={show} onHide={handleClose} size="xl">
+      <Modal show={show} onHide={handleClose} size="xl">
         <Modal.Header closeButton>
           <Modal.Title>Laporkan Jalan Rusak</Modal.Title>
         </Modal.Header>
@@ -173,7 +173,7 @@ export default function Maps({reports}) {
               Close
           </Button>
         </Modal.Footer>
-      </Modal> */}
+      </Modal>
       {/* akhir modal */}
 
 
