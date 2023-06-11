@@ -14,36 +14,44 @@ export default function Home() {
         <title>JalanSehat | Home</title>
       </Head>
       <Container fluid>
-        <Row className='container-row-jumbotron'>
-          <Col xs={12} sm={12} md={6} lg={6} className='image-colum-jum'>
+        <Row className="container-row-jumbotron">
+          {/* <Col xs={12} sm={12} md={6} lg={6} className='image-colum-jum'>
             <img className='image-maps-jumbotron' src="./assets/img/maps.png" alt="" />
-            {/* <Image src='./assets/img/maps.png' alt='maps' width='100' height='100'></Image> */}
-          </Col>
-          <Col xs={12} sm={12} md={6} lg={6} className='container-colum'>
-            <h2 className='text-name'>SELAMAT DATANG DI JALAN SEHAT</h2>
-            <p className='text-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos sed tempora voluptatem culpa dolor! Animi adipisci in illo aperiam illum, sit iste, nisi vitae repudiandae officiis cupiditate laudantium doloribus!</p>
+            <Image src='./assets/img/maps.png' alt='maps' width='100' height='100'></Image>
+          </Col> */}
+          <Col xs={12} sm={12} md={6} lg={6} className="container-colum">
+            <h2 className="text-name">SELAMAT DATANG DI JALAN SEHAT</h2>
+            <p className="text-desc">
+              <b>Jalan Sehat</b> adalah sistem informasi geografis yang
+              menyajikan data spasial mengenai kondisi jalan yang
+              diklasifikasikan berdasarkan tingkat kerusakannya.
+            </p>
           </Col>
         </Row>
-        <Row className='container-row'>
-          <Col xs={6} sm={6} md={4} className='container-colum'>
+        <Row className="container-row">
+          <Col xs={6} sm={6} md={4} className="container-colum">
             <img
-              src='./assets/img/img-1.png'
-              className='img-fluid shadow-2-strong pl-5'
-              alt='Image'
+              src="./assets/img/img-1.png"
+              className="img-fluid shadow-2-strong pl-5"
+              alt="Image"
               style={{width: 350}}
             />
           </Col>
-          <Col xs={6} sm={6} md={4} className='card-col'>
-            <p><b>Jalan Sehat</b> adalah sistem informasi geografis yang menyajikan data spasial mengenai kondisi jalan yang diklasifikasikan berdasarkan tingkat kerusakannya.</p>
+          <Col xs={6} sm={6} md={4} className="card-col">
+            <p>
+              <b>Jalan Sehat</b> adalah sistem informasi geografis yang
+              menyajikan data spasial mengenai kondisi jalan yang
+              diklasifikasikan berdasarkan tingkat kerusakannya.
+            </p>
           </Col>
         </Row>
-        <div className='p-0 m-0' style={Object.assign({background: 'rgb(196,221,209)', background: 'linear-gradient(360deg, rgba(196,221,209,1) 0%, rgba(233,246,240,1) 47%, rgba(237,245,241,1) 76%, rgba(243,243,243,1) 100%'})}>
+        {/* <div className='p-0 m-0' style={Object.assign({background: 'rgb(196,221,209)', background: 'linear-gradient(360deg, rgba(196,221,209,1) 0%, rgba(233,246,240,1) 0%, rgba(237,245,241,1) 0%, rgba(243,243,243,1) 0%'})}>
           <Row className='container-name-adventags'>
             <Col>
               <h1>Keunggulan Jalan Sehat</h1>
             </Col>
           </Row>
-          <Row className='container-row-adventags' style={Object.assign({background: 'rgb(196,221,209)', background: 'linear-gradient(360deg, rgba(196,221,209,1) 0%, rgba(233,246,240,1) 47%, rgba(237,245,241,1) 76%, rgba(243,243,243,1) 100%'})}>
+          <Row className='container-row-adventags' style={Object.assign({background: 'rgb(196,221,209)', background: 'linear-gradient(360deg, rgba(196,221,209,1) 0%, rgba(233,246,240,1) 0%, rgba(237,245,241,1) 0%, rgba(243,243,243,1) 0%'})}>
             <Col xs={10} sm={6} md={5} className='card-col-adventags'>
               <h3>Fleksibel</h3>
               <p>Dapat diakses oleh siapa saja dan dimana saja.</p>
@@ -63,7 +71,7 @@ export default function Home() {
               />
             </Col>
           </Row>
-        </div>
+        </div> */}
       </Container>
     </>
   );
