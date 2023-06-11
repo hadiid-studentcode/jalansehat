@@ -75,6 +75,7 @@ export default function Maps({reports}) {
         <title>JalanSehat | Maps</title>
       </Head>
 
+      {/* maps */}
       <Container>
         <Row className="row-container-maps">
           <Col xs={12} sm={12} md={12} xxl={8} className="col-maps-left">
