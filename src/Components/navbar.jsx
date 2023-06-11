@@ -39,11 +39,6 @@ export default function NavbarComponent() {
                 ))}
               </ul>
             </Nav>
-            <Nav>
-              <li className="nav-item">
-                <Link className="nav-link" href="/login"><Button style={Object.assign({background: '#3D8361', borderRadius: 18, fontWeight: 'bold', width: 100, border: 'none'})} className='mb-0'>Login</Button></Link>
-              </li>
-            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
