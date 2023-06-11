@@ -21,6 +21,7 @@ function LocationMarker({posisi, onPositionChange, onReport}) {
   const [positionNow, setPositionNow] = useState(null);
   const [reports, setReports] = useState(onReport);
 
+
   const map = useMapEvents({
     click(e) {
       setPosition(e.latlng);

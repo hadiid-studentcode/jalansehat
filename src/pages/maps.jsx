@@ -17,8 +17,6 @@ export default function Maps({reports}) {
   const [report, setReport] = useState(reports);
 
 
-
-
   const handlePositionChange1 = (newPosition1) => {
     setPosition(newPosition1);
   };
@@ -81,7 +79,7 @@ export default function Maps({reports}) {
         <Row className="row-container-maps">
           <Col xs={12} sm={12} md={12} xxl={8} className="col-maps-left">
             <div>
-              <Position onPositionChange1={handlePositionChange1} />
+              <Position onPositionChange1={handlePositionChange1} onReport={report} />
             </div>
           </Col>
           <Col xs={12} sm={12} md={12} xxl={4} className="col-maps-right">
