@@ -29,12 +29,12 @@ export default function Home() {
           </Col>
         </Row>
         <Row className="container-row">
-          <Col xs={6} sm={6} md={4} lg={3} className="container-person-left">
+          <Col xs={2} sm={3} md={4} lg={3} className="container-person-left">
             <div className="left-text">
               <p>Ini adalah kami yang sedang menerima laporan dari kamu</p>
             </div>
           </Col>
-          <Col xs={6} sm={6} md={4} lg={3} className="container-colum">
+          <Col xs={6} sm={3} md={4} lg={3} className="container-colum">
             <img
               src="./assets/img/home.png"
               className="img-fluid shadow-2-strong pl-5"
@@ -42,7 +42,7 @@ export default function Home() {
               style={{width: 350}}
             />
           </Col>
-          <Col xs={6} sm={6} md={4} lg={3} className="container-person-left">
+          <Col xs={2} sm={3} md={4} lg={3} className="container-person-left">
             <div className="left-right">
               <p>Ini adalah kami yang sedang menerima laporan dari kamu</p>
             </div>
