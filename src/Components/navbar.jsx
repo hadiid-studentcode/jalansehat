@@ -18,15 +18,9 @@ export default function NavbarComponent() {
 
   return (
     <>
-<<<<<<< HEAD
       <Navbar collapseOnSelect expand="md" className="navbar-container sticky-top">
         <Container fluid>
           <Navbar.Brand href="#home" className='navbar-brand'>
-=======
-      <Navbar collapseOnSelect expand="md" bg="light" variant="light" className="mb-3 p-0 sticky-top" style={{boxShadow: '1px 3px 5px 0px rgba(217,217,217,0.5'}}>
-        <Container fluid style={{fontWeight: 'bold'}}>
-          <Navbar.Brand href="#home" style={Object.assign({marginLeft: '5%', color: '#1C6758', fontSize: '1rem'})}>
->>>>>>> 98772302e9e73eb7b1157c4641774fd8e6758195
             <img
               src='../assets/img/logo/iconjalanSehat.png'
               height='50'
