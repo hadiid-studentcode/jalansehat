@@ -36,7 +36,7 @@ export default function Maps({reports}) {
     if (status === 'SUBSCRIBED') {
       const res = await supabase
           .from('reports')
-          .select('id,jenisKerusakan,latitude,longitude,message,status')
+          .select('id,jenisKerusakan,latitude,longitude,message,status,foto')
           .eq('status', 'diterima');
       setData(res.data);
     }
@@ -66,24 +66,36 @@ export default function Maps({reports}) {
   const handleSendReport = async (e) => {
     e.preventDefault();
 
-    const {data, error} = await supabase
+    const imageReport = e.target.elements.image.files[0];
+
+    const {data: uploadData, error: uploadError} = await supabase
+        .storage
+        .from('jalanSehat')
+        .upload(`public/${imageReport.name}`, imageReport);
+
+    if (uploadError) {
+      console.log(uploadError);
+      return; // Menghentikan eksekusi jika terjadi error pada upload gambar
+    }
+
+    const {data: insertData, error: insertError} = await supabase
         .from('reports')
         .insert([
           {
-            nama: e.target.name.value,
-            jenisKerusakan: e.target.damageType.value,
-            latitude: e.target.locationLat.value,
-            longitude: e.target.locationLng.value,
-            message: e.target.message.value,
+            nama: e.target.elements.name.value,
+            jenisKerusakan: e.target.elements.damageType.value,
+            latitude: e.target.elements.locationLat.value,
+            longitude: e.target.elements.locationLng.value,
+            message: e.target.elements.message.value,
             status: 'diterima',
-
+            foto: e.target.elements.image.files[0].name,
           },
         ]);
 
-    if (error) {
-      console.log(error);
+    if (insertError) {
+      console.log(insertError);
     } else {
-      alert('Laporan berhasil disimpan !');
+      alert('Laporan berhasil disimpan!');
     }
 
     setShow(false);
@@ -171,7 +183,7 @@ export default function Maps({reports}) {
 
                   <Form.Group controlId="formFileSm" className="mb-3">
                     <Form.Label>Small file input example</Form.Label>
-                    <Form.Control type="file" size="sm" />
+                    <Form.Control type="file" size="sm" name='image' />
                   </Form.Group>
 
                   <Form.Group className="mb-3" id="exampleForm.ControlTextarea1">
@@ -212,7 +224,7 @@ export default function Maps({reports}) {
 export async function getServerSideProps() {
   const {data: reports, error} = await supabase
       .from('reports')
-      .select('id,jenisKerusakan,latitude,longitude,message,status')
+      .select('id,jenisKerusakan,latitude,longitude,message,status,foto')
       .eq('status', 'diterima');
 
 
