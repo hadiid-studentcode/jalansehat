@@ -20,14 +20,14 @@ export default function NavbarComponent() {
     <>
       <Navbar collapseOnSelect expand="md" className="navbar-container sticky-top">
         <Container fluid>
-          {/* <Navbar.Brand href="#home" className='navbar-brand'>
+          <Navbar.Brand href="#home" className='navbar-brand'>
             <img
               src='../assets/img/logo/iconjalanSehat.png'
               height='50'
               alt='Logo'
               loading='lazy'
-            />Jalan Sehat
-          </Navbar.Brand> */}
+            /><h4>Jalan Sehat</h4>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="m-auto">

@@ -389,3 +389,20 @@ h1 {
   color: #ffffff;
   font-size: 14px;
 }
+
+.navbar-brand{
+  display: flex;
+  margin-bottom: -3px ;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-brand h4 {
+  margin-bottom: -1px;
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+#responsive-navbar-nav{
+  color: white;
+}
