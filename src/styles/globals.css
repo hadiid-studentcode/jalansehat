@@ -18,8 +18,14 @@ body {
   border: none;
 }
 
-.flag {
+.flag{
+  margin-left: 5%;
   margin-right: 2.5%;
+}
+
+.navbar-brand{
+  margin-left: 2.5%;
+  margin-right: 5%;
 }
 
 .footer-clean {
