@@ -16,7 +16,7 @@ import {
 import {useState} from 'react';
 import {useMapEvents} from 'react-leaflet/hooks';
 
-function LocationMarker({posisi, onPositionChange, onReport}) {
+function LocationMarker({posisi, onPositionChange, onReport, onData}) {
   const [position, setPosition] = useState(null);
   const [positionNow, setPositionNow] = useState(null);
   const [reports, setReports] = useState(onReport);
@@ -52,7 +52,7 @@ function LocationMarker({posisi, onPositionChange, onReport}) {
 
       {
         // Render hasil pencarian jika data tersedia
-        reports.map((r) => (
+        onData.map((r) => (
           <Marker key={r.id} position={[r.latitude, r.longitude]}>
             <Popup>{r.message}</Popup>
           </Marker>
@@ -62,7 +62,7 @@ function LocationMarker({posisi, onPositionChange, onReport}) {
   );
 }
 
-export default function Position({posisi1, onPositionChange1, onReport}) {
+export default function Position({posisi1, onPositionChange1, onReport, onData}) {
   const [position, setPosition] = useState(null);
   const [report, setReport] = useState(onReport);
 
@@ -82,7 +82,7 @@ export default function Position({posisi1, onPositionChange1, onReport}) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      <LocationMarker onPositionChange={handlePositionChange} onReport={report} />
+      <LocationMarker onPositionChange={handlePositionChange} onReport={report} onData={onData} />
     </MapContainer>
   );
 }
