@@ -18,23 +18,23 @@ export default function NavbarComponent() {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="md" bg="light" variant="light" className="mb-3 p-0 sticky-top" style={{boxShadow: '1px 3px 5px 0px rgba(217,217,217,0.5'}}>
+      <Navbar collapseOnSelect expand="md" className="navbar-container sticky-top">
         <Container fluid>
-          <Navbar.Brand href="#home" style={Object.assign({marginLeft: '5%', color: '#1C6758', fontSize: '1rem', fontWeight: 'bold'})}>
+          {/* <Navbar.Brand href="#home" className='navbar-brand'>
             <img
               src='../assets/img/logo/iconjalanSehat.png'
               height='50'
               alt='Logo'
               loading='lazy'
             />Jalan Sehat
-          </Navbar.Brand>
+          </Navbar.Brand> */}
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="m-auto">
               <ul className="navbar-nav">
                 {navigation.map((item) => (
                   <li key={item.name} className="nav-item">
-                    <Link className={`${item.classLink}`} href={item.Link}>{item.name}</Link>
+                    <Link className={`${item.classLink} link-item`} href={item.Link}>{item.name}</Link>
                   </li>
                 ))}
               </ul>
