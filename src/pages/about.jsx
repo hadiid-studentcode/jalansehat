@@ -25,7 +25,7 @@ const teamsData = [
   },
   {
     id: 4,
-    image: 'https://play-lh.googleusercontent.com/rSDDfH3QSNW1zngBRYI1hu8datJ4XilnrW4LBEBf54knmzeW1XlRb4INHnDpm4JRPSg=w480-h960-rw',
+    image: './assets/img/teams/rais.jpg',
     name: 'Rais Adi Sutopo',
     description: 'STMIK AMIKOM Surakarta',
   },

@@ -18,15 +18,20 @@ export default function NavbarComponent() {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="md" className="navbar-container sticky-top">
+      <Navbar
+        collapseOnSelect
+        expand="md"
+        className="navbar-container sticky-top"
+      >
         <Container fluid>
-          <Navbar.Brand href="#home" className='navbar-brand'>
+          <Navbar.Brand href="#home" className="navbar-brand">
             <img
-              src='../assets/img/logo/iconjalanSehat.png'
-              height='50'
-              alt='Logo'
-              loading='lazy'
-            /><h4>Jalan Sehat</h4>
+              src="../assets/img/logo/iconjalanSehat.png"
+              height="50"
+              alt="Logo"
+              loading="lazy"
+            />
+            <h4>Jalan Sehat</h4>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -34,12 +39,24 @@ export default function NavbarComponent() {
               <ul className="navbar-nav">
                 {navigation.map((item) => (
                   <li key={item.name} className="nav-item">
-                    <Link className={`${item.classLink} link-item`} href={item.Link}>{item.name}</Link>
+                    <Link
+                      className={`${item.classLink} link-item`}
+                      href={item.Link}
+                    >
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </Nav>
           </Navbar.Collapse>
+          <img
+            className="flag"
+            src="../assets/img/indonesia.png"
+            height="30"
+            alt="Logo"
+            loading="lazy"
+          />
         </Container>
       </Navbar>
     </>

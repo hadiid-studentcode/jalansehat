@@ -18,10 +18,9 @@ body {
   border: none;
 }
 
-/* 
-.footer {
-  background-color: #4c4c6d;
-} */
+.flag {
+  margin-right: 2.5%;
+}
 
 .footer-clean {
   padding:50px 0;
@@ -437,6 +436,10 @@ h1 {
 
 #responsive-navbar-nav{
   color: white;
+}
+
+.title-holder{
+  margin-top: 100px;
 }
 
 /* Home */
