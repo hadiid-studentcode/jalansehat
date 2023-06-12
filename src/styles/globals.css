@@ -396,3 +396,17 @@ h1 {
 .icon-btn{
   margin-left: 10px;
 }
+
+/* Home */
+.container-person-left{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container-person-right{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+  
