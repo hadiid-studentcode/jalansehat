@@ -22,6 +22,13 @@ export default function Home() {
             </p>
           </Col>
         </Row>
+        <Row>
+          <img
+            src="./assets/img/line.png"
+            className="img-fluid shadow-2-strong pl-5"
+            style={{height: 10}}
+          ></img>
+        </Row>
         <Row className="container-row">
           <Col xs={6} sm={3} md={4} lg={3} className="container-person-left">
             <div className="left-text">
@@ -37,7 +44,6 @@ export default function Home() {
               src="./assets/img/home.png"
               className="img-fluid shadow-2-strong pl-5"
               alt="Image"
-              style={{width: 350}}
             />
           </Col>
           <Col xs={6} sm={3} md={4} lg={3} className="container-person-left">

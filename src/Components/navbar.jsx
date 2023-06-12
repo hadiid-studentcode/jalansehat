@@ -25,12 +25,6 @@ export default function NavbarComponent() {
       >
         <Container fluid>
           <Navbar.Brand href="#home" className="navbar-brand">
-            {/* <img
-              src="../assets/img/logo/iconjalanSehat.png"
-              height="50"
-              alt="Logo"
-              loading="lazy"
-            /> */}
             <h4>Jalan Sehat</h4>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
