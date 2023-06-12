@@ -29,20 +29,23 @@ export default function Home() {
           </Col>
         </Row>
         <Row className="container-row">
-          <Col xs={6} sm={6} md={4} className="container-colum">
+          <Col xs={6} sm={6} md={4} lg={3} className="container-person-left">
+            <div className="left-text">
+              <p>Ini adalah kami yang sedang menerima laporan dari kamu</p>
+            </div>
+          </Col>
+          <Col xs={6} sm={6} md={4} lg={3} className="container-colum">
             <img
-              src="./assets/img/img-1.png"
+              src="./assets/img/home.png"
               className="img-fluid shadow-2-strong pl-5"
               alt="Image"
               style={{width: 350}}
             />
           </Col>
-          <Col xs={6} sm={6} md={4} className="card-col">
-            <p>
-              <b>Jalan Sehat</b> adalah sistem informasi geografis yang
-              menyajikan data spasial mengenai kondisi jalan yang
-              diklasifikasikan berdasarkan tingkat kerusakannya.
-            </p>
+          <Col xs={6} sm={6} md={4} lg={3} className="container-person-left">
+            <div className="left-right">
+              <p>Ini adalah kami yang sedang menerima laporan dari kamu</p>
+            </div>
           </Col>
         </Row>
         {/* <div className='p-0 m-0' style={Object.assign({background: 'rgb(196,221,209)', background: 'linear-gradient(360deg, rgba(196,221,209,1) 0%, rgba(233,246,240,1) 0%, rgba(237,245,241,1) 0%, rgba(243,243,243,1) 0%'})}>
