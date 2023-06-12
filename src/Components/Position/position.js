@@ -3,6 +3,7 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import style from '../../styles/Maps.module.css';
+import Image from 'next/image';
 
 import {
   MapContainer,
@@ -54,7 +55,21 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
         // Render hasil pencarian jika data tersedia
         onData.map((r) => (
           <Marker key={r.id} position={[r.latitude, r.longitude]}>
-            <Popup>{r.message}</Popup>
+            <Popup>
+              {r.message}
+
+              {r.foto && (
+                <div style={{width: '300px', height: '300px'}}>
+                  <Image
+                    src={`https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/${r.foto}`}
+                    alt="Foto"
+                    layout="responsive"
+                    width={300}
+                    height={300}
+                  />
+                </div>
+              )}
+            </Popup>
           </Marker>
         ))
       }
