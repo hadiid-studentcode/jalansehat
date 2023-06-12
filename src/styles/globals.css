@@ -378,6 +378,7 @@ h1 {
 
 
 
+
 /* NAVBAR */
 
 .navbar-container {
@@ -406,3 +407,17 @@ h1 {
 #responsive-navbar-nav{
   color: white;
 }
+
+/* Home */
+.container-person-left{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container-person-right{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+  
