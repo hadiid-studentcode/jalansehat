@@ -18,7 +18,7 @@ const teamsData = [
   },
   {
     id: 3,
-    image: 'https://play-lh.googleusercontent.com/rSDDfH3QSNW1zngBRYI1hu8datJ4XilnrW4LBEBf54knmzeW1XlRb4INHnDpm4JRPSg=w480-h960-rw',
+    image: './assets/img/teams/haidar.png',
     name: 'Haidar Fiki Rabani',
     description: 'STMIK AMIKOM Surakarta',
   },
@@ -32,12 +32,12 @@ const teamsData = [
 
 export default function AboutUs() {
   return (
-    <section id="teams" className="block teams-block text-center">
+    <section id="teams" className="block teams-block text-center" style={{minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
       <Container>
         <div className="title-holder">
           <h3 style={Object.assign({color: '#4C4C6D', fontWeight: 'bold'})}>Tentang Kami</h3>
           <h4 style={Object.assign({color: '#1B9C85', fontWeight: 'bold'})}>Berkenalan dengan Tim Kami</h4>
-          <hr className="line"></hr>
+          <div className='divider div-transparent div-dot m-3'></div>
           <div className="subtitle pb-4" style={Object.assign({color: '#4C4C6D', opacity: '0.8'})}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
         <Row className="justify-content-md-center">
