@@ -3,9 +3,6 @@ import styles from '../styles/Home.module.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'next/image';
-import Carousel from 'react-bootstrap/Carousel';
-import React from 'react';
 
 export default function Home() {
   return (
