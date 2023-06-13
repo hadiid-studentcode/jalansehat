@@ -50,7 +50,6 @@ const teamsData = [
 ];
 
 export default function AboutUs() {
-  const hoverSocial = useState('#1B9C85');
   return (
     <>
       <Head>
@@ -61,8 +60,7 @@ export default function AboutUs() {
           <div className="title-holder">
             <h3 style={Object.assign({color: '#4C4C6D', fontWeight: 'bold'})}>Tentang Kami</h3>
             <h4 style={Object.assign({color: '#1B9C85', fontWeight: 'bold'})}>Berkenalan dengan Tim Kami</h4>
-            <hr className="line"></hr>
-            <div className="subtitle pb-4" style={Object.assign({color: '#4C4C6D', opacity: '0.8'})}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div className="subtitle pb-4" style={Object.assign({color: '#4C4C6D', opacity: '0.8'})}>Kami menyediakan fasilitas terbaik agar Anda dapat beraktivitas tanpa hambatan</div><br/>
           </div>
           <Row className="justify-content-md-center">
             {
