@@ -11,6 +11,25 @@ body {
   background-color: #f3f3f300;
 }
 
+/* Index */  
+.adventage-desc {
+  padding-left: 30px;
+}
+
+.advantage-title {
+  text-align: center;
+  padding-top: 30px;
+}
+  
+.advantage-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  position: relative;
+  color: #3d8361;
+  margin-top: 20px;
+  padding: 20px;
+}
+  
 .footer {
   background-color: #4c4c6d;
 }
