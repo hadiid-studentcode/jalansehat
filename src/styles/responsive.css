@@ -1,5 +1,8 @@
 /* responsive */
 @media screen and (max-width: 850px) {
+      .flag {
+        display: none;
+      }
 
       .cardLogin {
         margin-left: 5%;
@@ -53,7 +56,7 @@
       
 
       .row-container-maps {
-        margin-top: -3px;
+        margin-top: 15px;
         margin-left: 0;
         margin-right: 0;
         margin-bottom: 100px;
@@ -61,6 +64,7 @@
       .mark-color {
         margin-top: -12px;
         font-size: 12px;
+  
       }
 }
 
