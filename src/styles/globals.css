@@ -349,3 +349,7 @@ h1 {
   border-bottom: 2px solid #3d8361;
 }
 
+.img-bg-modal{
+  width: 100%;
+  position: absolute;
+}
