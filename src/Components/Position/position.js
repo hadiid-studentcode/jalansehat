@@ -108,14 +108,15 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
             icon={getIconByDamageType(r.jenisKerusakan)}
           >
             <Popup>
-              <Card style={{width: '18rem'}}>
+              <Card className='card-maps'>
                 {r.foto && (
-                  <Card.Img
+                  <Card.Img className='img-maps'
                     variant="top"
                     src={`https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/${r.foto}`}
+                    height="300px"
                   />
                 )}
-                <Card.Body>
+                <Card.Body className='card-body-maps'>
                   <Card.Title>{r.jenisKerusakan} </Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
                     {r.nama}
@@ -126,7 +127,7 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
                     target="_blank"
                   >
                     {' '}
-                    <Button variant="success">Go Location</Button>
+                    <Button className='btn-maps' variant="success">Go Location</Button>
                   </Link>
                 </Card.Body>
               </Card>

@@ -217,16 +217,6 @@ body {
   font-size: 40px;
 }
 
-.card-col {
-  background: #ffe194;
-  padding: 60px 10px;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  border-radius: 20px;
-  margin: 10px;
-}
-
 .container-name-adventags {
   margin-top: 50px;
   color: #4c4c6d;
@@ -241,10 +231,7 @@ body {
 h1 {
   text-align: center;
 }
-.card-col-adventags {
-  max-width: 45%;
-  padding: 2%;
-}
+
 .image-colum-jum {
   background: #4c4c6d;
   padding: 5px;
