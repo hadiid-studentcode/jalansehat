@@ -1,5 +1,8 @@
 /* responsive */
 @media screen and (max-width: 850px) {
+      .flag {
+        display: none;
+      }
 
       .cardLogin {
         margin-left: 5%;

@@ -10,6 +10,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Compressor from 'compressorjs';
 
 export default function Maps({reports}) {
   const [position, setPosition] = useState(null);
@@ -36,7 +37,7 @@ export default function Maps({reports}) {
     if (status === 'SUBSCRIBED') {
       const res = await supabase
           .from('reports')
-          .select('id,jenisKerusakan,latitude,longitude,message,status')
+          .select('id,nama,jenisKerusakan,latitude,longitude,message,status,foto')
           .eq('status', 'diterima');
       setData(res.data);
     }
@@ -66,24 +67,53 @@ export default function Maps({reports}) {
   const handleSendReport = async (e) => {
     e.preventDefault();
 
-    const {data, error} = await supabase
+    const imageReport = e.target.elements.image.files[0];
+
+    try {
+      const compressedResult = await new Promise((resolve) => {
+        new Compressor(imageReport, {
+          quality: 0.8,
+          width: 200,
+          height: 200,
+          success: (compressed) => {
+            resolve(compressed);
+          },
+        });
+      });
+
+      const {data: uploadData, error: uploadError} = await supabase
+          .storage
+          .from('jalanSehat')
+          .upload(`public/${imageReport.name}`, compressedResult);
+
+      if (uploadError) {
+        console.error(uploadError);
+      } else {
+        console.log(uploadData);
+        // Lakukan tindakan lanjutan setelah upload berhasil
+      }
+    } catch (error) {
+      console.error(error);
+    }
+
+    const {data: insertData, error: insertError} = await supabase
         .from('reports')
         .insert([
           {
-            nama: e.target.name.value,
-            jenisKerusakan: e.target.damageType.value,
-            latitude: e.target.locationLat.value,
-            longitude: e.target.locationLng.value,
-            message: e.target.message.value,
+            nama: e.target.elements.name.value,
+            jenisKerusakan: e.target.elements.damageType.value,
+            latitude: e.target.elements.locationLat.value,
+            longitude: e.target.elements.locationLng.value,
+            message: e.target.elements.message.value,
             status: 'diterima',
-
+            foto: e.target.elements.image.files[0].name,
           },
         ]);
 
-    if (error) {
-      console.log(error);
+    if (insertError) {
+      console.log(insertError);
     } else {
-      alert('Laporan berhasil disimpan !');
+      alert('Laporan berhasil disimpan!');
     }
 
     setShow(false);
@@ -217,7 +247,7 @@ export default function Maps({reports}) {
 export async function getServerSideProps() {
   const {data: reports, error} = await supabase
       .from('reports')
-      .select('id,jenisKerusakan,latitude,longitude,message,status')
+      .select('id,nama,jenisKerusakan,latitude,longitude,message,status,foto')
       .eq('status', 'diterima');
 
 
