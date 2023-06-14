@@ -66,6 +66,20 @@
         font-size: 12px;
   
       }
+      
+      .col-maps-left-modal h4 {
+        color: #3d8361;
+        font-weight: 600;
+      }
+
+      .col-maps-left-modal p {
+      color: #4c4c6d;
+      font-size:x-small;
+      padding-left: 0%;
+      padding-right: 0%;
+      margin-bottom: 50px;
+      }
+
 }
 
  
