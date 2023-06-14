@@ -38,13 +38,13 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
     locationfound(e) {
       setPositionNow(e.latlng);
 
-      map.flyTo(e.latlng, map.getZoom());
+      map.flyTo(e.latlng, map.getZoom() + 2);
     },
   });
 
   useEffect(() => {
     map.locate();
-  }, [map]);
+  }, []);
 
 
   // Definisikan ikon marker sesuai kebutuhan Anda
@@ -119,7 +119,7 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
                     variant="top"
                     src={`https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/${r.foto}`}
                     height="300px"
-                  
+
                   />
                 )}
                 <Card.Body className='card-body-maps'>

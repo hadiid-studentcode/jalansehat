@@ -99,6 +99,7 @@ export default function Maps({reports}) {
         .insert([
           {
             nama: e.target.elements.name.value,
+            email: e.target.elements.email.value,
             jenisKerusakan: e.target.elements.damageType.value,
             latitude: e.target.elements.locationLat.value,
             longitude: e.target.elements.locationLng.value,
@@ -238,6 +239,7 @@ export default function Maps({reports}) {
                       type="email"
                       placeholder="alexsteven@example.com"
                       size="sm"
+                      name="email"
                     />
                   </Form.Group>
 
