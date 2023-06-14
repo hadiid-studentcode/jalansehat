@@ -14,7 +14,7 @@ import {
   Circle,
 } from 'react-leaflet';
 
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {useMapEvents} from 'react-leaflet/hooks';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -41,6 +41,11 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
       map.flyTo(e.latlng, map.getZoom());
     },
   });
+
+  useEffect(() => {
+    map.locate();
+  }, [map]);
+
 
   // Definisikan ikon marker sesuai kebutuhan Anda
   const highDamage = divIcon({
@@ -114,7 +119,7 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
                     variant="top"
                     src={`https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/${r.foto}`}
                     height="300px"
-                  
+
                   />
                 )}
                 <Card.Body>
