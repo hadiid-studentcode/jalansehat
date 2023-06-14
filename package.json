@@ -30,6 +30,7 @@
     "react-dom": "^18.2.0",
     "react-geolocation": "^1.0.4",
     "react-leaflet": "^4.2.1",
+    "sweetalert2": "^11.7.12",
     "swr": "^2.1.5"
   },
   "devDependencies": {

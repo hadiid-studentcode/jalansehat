@@ -11,6 +11,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Compressor from 'compressorjs';
+import Swal from 'sweetalert2';
 
 export default function Maps({reports}) {
   const [position, setPosition] = useState(null);
@@ -87,13 +88,13 @@ export default function Maps({reports}) {
           .upload(`public/${imageReport.name}`, compressedResult);
 
       if (uploadError) {
-        console.error(uploadError);
+
       } else {
-        console.log(uploadData);
+
         // Lakukan tindakan lanjutan setelah upload berhasil
       }
     } catch (error) {
-      console.error(error);
+
     }
 
     const {data: insertData, error: insertError} = await supabase
@@ -112,9 +113,19 @@ export default function Maps({reports}) {
         ]);
 
     if (insertError) {
-      console.log(insertError);
+      Swal.fire({
+        title: 'error!',
+        text: 'Failed to save report !',
+        icon: 'error',
+        confirmButtonText: 'okay!',
+      });
     } else {
-      alert('Laporan berhasil disimpan!');
+      Swal.fire({
+        title: 'success!',
+        text: 'Report Saved Successfully !',
+        icon: 'success',
+        confirmButtonText: 'Its cool!',
+      });
     }
 
     setShow(false);
