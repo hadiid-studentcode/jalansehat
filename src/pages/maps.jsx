@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable camelcase */
 import {supabase} from '../../lib/supabaseClient';
 import Position from '@/Components/Position';
@@ -11,6 +12,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Compressor from 'compressorjs';
+import Swal from 'sweetalert2';
 
 export default function Maps({reports}) {
   const [position, setPosition] = useState(null);
@@ -59,8 +61,17 @@ export default function Maps({reports}) {
 
   // modal
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => {
+    Swal.fire({
+      title: 'portrait rule!!',
+      text: 'use landscape mode for photo reports.',
+      imageUrl: 'https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/icon/ezgif-3-1cda8f2b80.gif',
+      imageWidth: 150,
+      imageAlt: 'Custom image',
+    });
 
+    setShow(true);
+  };
   // end modal
 
   // submit form report
@@ -72,7 +83,9 @@ export default function Maps({reports}) {
     try {
       const compressedResult = await new Promise((resolve) => {
         new Compressor(imageReport, {
-          quality: NaN,
+          quality: 0.8,
+          width: 500,
+          height: 500,
           success: (compressed) => {
             resolve(compressed);
           },
@@ -85,20 +98,32 @@ export default function Maps({reports}) {
           .upload(`public/${imageReport.name}`, compressedResult);
 
       if (uploadError) {
-        console.error(uploadError);
+
       } else {
-        console.log(uploadData);
+
         // Lakukan tindakan lanjutan setelah upload berhasil
       }
     } catch (error) {
-      console.error(error);
+
     }
+
+    if (!imageReport) {
+      Swal.fire({
+        title: 'error!',
+        text: 'image not found!',
+        icon: 'question',
+        confirmButtonText: 'okay!',
+      });
+      return;
+    }
+
 
     const {data: insertData, error: insertError} = await supabase
         .from('reports')
         .insert([
           {
             nama: e.target.elements.name.value,
+            email: e.target.elements.email.value,
             jenisKerusakan: e.target.elements.damageType.value,
             latitude: e.target.elements.locationLat.value,
             longitude: e.target.elements.locationLng.value,
@@ -109,9 +134,19 @@ export default function Maps({reports}) {
         ]);
 
     if (insertError) {
-      console.log(insertError);
+      Swal.fire({
+        title: 'error!',
+        text: 'Failed to save report !',
+        icon: 'error',
+        confirmButtonText: 'okay!',
+      });
     } else {
-      alert('Laporan berhasil disimpan!');
+      Swal.fire({
+        title: 'success!',
+        text: 'Report Saved Successfully !',
+        icon: 'success',
+        confirmButtonText: 'Its cool!',
+      });
     }
 
     setShow(false);
@@ -238,6 +273,8 @@ export default function Maps({reports}) {
                       type="email"
                       placeholder="alexsteven@example.com"
                       size="sm"
+                      name="email"
+                      required
                     />
                   </Form.Group>
 
@@ -267,6 +304,7 @@ export default function Maps({reports}) {
                       type="file"
                       size="sm"
                       name="image"
+                      required
                     />
                   </Form.Group>
 
@@ -285,6 +323,7 @@ export default function Maps({reports}) {
                       id="locationLat"
                       name="locationLat"
                       size="sm"
+
                     />
                   </Form.Group>
 

@@ -16,12 +16,14 @@ export default function Home() {
       <Container fluid>
         <Row className="container-row-jumbotron">
           <Col xs={12} sm={12} md={6} lg={6} className="container-column">
-            <h2 className="text-name">SELAMAT DATANG DI JALAN SEHAT</h2>
-            <p className="text-desc">
-              <b>Jalan Sehat</b> adalah sistem informasi geografis yang
-              menyajikan data spasial mengenai kondisi jalan yang
-              diklasifikasikan berdasarkan tingkat kerusakannya.
-            </p>
+            <center>
+              <h2 className='text-name'>SELAMAT DATANG DI JALAN SEHAT</h2>
+              <p className="text-desc">
+                <b>Jalan Sehat</b> adalah sistem informasi geografis yang
+                menyajikan data spasial mengenai kondisi jalan yang
+                diklasifikasikan berdasarkan tingkat kerusakannya.
+              </p>
+            </center>
           </Col>
         </Row>
         <Row>
@@ -31,33 +33,51 @@ export default function Home() {
             style={{height: 10}}
           ></img>
         </Row>
-        <Row className="container-row">
-          <Col xs={6} sm={3} md={4} lg={3}>
-            <div className="content-home">
-              <p>Bantu kamu mencari jalan yang sehat untuk dilewati</p>
-              <p>
-                Berbagai laporan tentang jalan ada disini dan kamu dapat menjadi
-                bagian darinya
-              </p>
-            </div>
-          </Col>
-          <Col xs={10} sm={10} md={4} lg={3}>
-            <div className="content-home">
-              <img
-                src="./assets/img/home.png"
-                className="img-fluid shadow-2-strong pl-5"
-                alt="Image"
-              />
-            </div>
-          </Col>
-          <Col xs={6} sm={3} md={4} lg={3}>
-            <div className="content-home">
-              <p>Semua laporan yang ada pada maps terupdate secara real time</p>
-              <p>Agar perjalananmu di jalan lebih nyaman dan aman</p>
-            </div>
-          </Col>
-        </Row>
-
+        <center>
+          <h1 className="header-video">Berawal dari Berbagai Laporan</h1>
+          <p className="p-video-desc">
+            Kami berinisiatif untuk melakukan perubahan dengan membuat sebuah
+            aplikasi berbasis website sebagai sebuah solusi dari berbagai
+            permasalah video dibawah ini
+          </p>
+          <div className="ctnr-crsl">
+            <Carousel className="crsl" variant="dark">
+              <Carousel.Item>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/OeOngPhRyBY"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </Carousel.Item>
+              <Carousel.Item>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/WUHDNwvkiOk"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </Carousel.Item>
+              <Carousel.Item>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/oWPG2avXVlE"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </Carousel.Item>
+            </Carousel>
+          </div>
+        </center>
         <div className="advantage">
           <Container>
             <div className="advantage-title">
@@ -189,7 +209,12 @@ export default function Home() {
                   src="./assets/img/next-js.png"
                   alt="First slide"
                 />
-                <Carousel.Caption></Carousel.Caption>
+                <Carousel.Caption className="caption-text">
+                  <h3>Next.js</h3>
+                  <p>
+                    A powerful React framework for building web applications.
+                  </p>
+                </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img
@@ -197,15 +222,21 @@ export default function Home() {
                   src="./assets/img/react.png"
                   alt="Second slide"
                 />
-                <Carousel.Caption></Carousel.Caption>
+                <Carousel.Caption className="caption-text">
+                  <h3>React</h3>
+                  <p>A JavaScript library for building user interfaces.</p>
+                </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="./assets/img/html-css-js.png"
+                  src="./assets/img/leaflet.png"
                   alt="Third slide"
                 />
-                <Carousel.Caption></Carousel.Caption>
+                <Carousel.Caption className="caption-text">
+                  <h3>Leaflet</h3>
+                  <p>Leaflet is the JavaScript library for interactive maps.</p>
+                </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
           </div>
