@@ -63,9 +63,8 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
                   <Image
                     src={`https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/${r.foto}`}
                     alt="Foto"
-                    layout="responsive"
-                    width={300}
-                    height={300}
+                    width={200}
+                    height={200}
                   />
                 </div>
               )}
