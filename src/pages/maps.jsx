@@ -198,15 +198,10 @@ export default function Maps({reports}) {
           <Modal.Title>Laporkan Jalan Rusak</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <img src="./assets/img/abstract-white-background.jpg"></img>
           <Container>
             <Row className="row-container-maps">
-              {/* <Col
-                xs={12}
-                sm={12}
-                md={12}
-                xxl={6}
-                className="col-maps-left"
-              ></Col> */}
+              <Col xs={12} sm={12} md={12} xxl={6} className=""></Col>
 
               <Col xs={12} sm={12} md={12} xxl={6} className="col-maps-right">
                 <Form onSubmit={handleSendReport} method="POST">
