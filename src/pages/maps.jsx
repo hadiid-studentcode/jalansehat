@@ -163,25 +163,25 @@ export default function Maps({reports}) {
               className="mark-color"
               style={Object.assign({color: '#CD1818'})}
             >
-              <i className="bi bi-pin-map-fill"></i> Kerusakan Tinggi
+              <i className="bi bi-geo-alt-fill"></i> Kerusakan Tinggi
             </p>
             <p
               className="mark-color"
               style={Object.assign({color: '#F49D1A'})}
             >
-              <i className="bi bi-pin-map-fill"></i> Kerusakan Menengah
+              <i className="bi bi-geo-alt-fill"></i> Kerusakan Menengah
             </p>
             <p
               className="mark-color"
               style={Object.assign({color: '#3E6D9C'})}
             >
-              <i className="bi bi-pin-map-fill"></i> Sedang Perbaikan
+              <i className="bi bi-geo-alt-fill"></i> Sedang Perbaikan
             </p>
             <p
               className="mark-color"
               style={Object.assign({color: '#5D9C59'})}
             >
-              <i className="bi bi-pin-map-fill"></i> Kondisi Jalan Baik
+              <i className="bi bi-geo-alt-fill"></i> Kondisi Jalan Baik
             </p>
 
             <Button className="btn-laporan" onClick={handleShow}>
@@ -198,6 +198,7 @@ export default function Maps({reports}) {
           <Modal.Title>Laporkan Jalan Rusak</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+
           <Container>
             <Row className="row-container-maps-modal">
               <Col xs={12} sm={12} md={12} xxl={6}className="col-maps-left-modal">
@@ -224,6 +225,7 @@ export default function Maps({reports}) {
                 </div>
               </Col>
 
+
               <Col xs={12} sm={12} md={12} xxl={6} className="col-maps-right">
                 <Form onSubmit={handleSendReport} method="POST">
                   <Form.Group
@@ -242,9 +244,16 @@ export default function Maps({reports}) {
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput1"
+                  >
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="name@example.com" />
+                    <Form.Control
+                      className="input-desain"
+                      type="email"
+                      placeholder="name@example.com"
+                    />
                   </Form.Group>
 
                   <Form.Group className="mb-3" id="exampleForm.ControlInput1">
@@ -327,7 +336,7 @@ export default function Maps({reports}) {
                       id="message"
                     />
                   </Form.Group>
-                  <Button type="submit" variant="primary">
+                  <Button type="submit" variant="success">
                     Save Changes
                   </Button>
                 </Form>
