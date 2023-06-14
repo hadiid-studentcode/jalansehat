@@ -195,7 +195,6 @@ export default function Maps({reports}) {
       {/* modal */}
       <Modal show={show} onHide={handleClose} size="xl">
         <Modal.Header closeButton>
-          <Modal.Title>Laporkan Jalan Rusak</Modal.Title>
         </Modal.Header>
         <Modal.Body>
 
@@ -208,8 +207,8 @@ export default function Maps({reports}) {
                   alt="Image"
                 />
                 <h4>Laporakan Jalan Rusak</h4>
-                <p><b>Hi. Yuk !</b> Bantu Kita untuk membuat laporan tentang kondisi jalan diwilayah anda saat ini. Karena dengan Laporan ini kita dapat mengetahui kondisi jalan sebelum kita berkendara agar perjalanan menjadi aman dan nyaman.</p>
-                <div className="sosial-media-modal">
+                <p><b>Yuk !</b> Bantu Kita untuk membuat laporan tentang kondisi jalan diwilayah anda saat ini. Karena dengan Laporan ini kita dapat mengetahui kondisi jalan sebelum kita berkendara agar perjalanan menjadi aman dan nyaman.</p>
+                {/* <div className="sosial-media-modal">
                   <a href="#">
                     <i className="icon-modal bi bi-twitter"></i>
                   </a>
@@ -222,7 +221,7 @@ export default function Maps({reports}) {
                   <a href="#">
                     <i className="icon-modal bi bi-linkedin"></i>
                   </a>
-                </div>
+                </div> */}
               </Col>
 
 
@@ -237,10 +236,11 @@ export default function Maps({reports}) {
                       className="input-desain"
                       type="text"
                       onChange={handleChange}
-                      placeholder="Nama Pelapor"
+                      placeholder="Alex Steven"
                       required
                       name="name"
                       id="name"
+                      size="sm"
                     />
                   </Form.Group>
 
@@ -252,7 +252,8 @@ export default function Maps({reports}) {
                     <Form.Control
                       className="input-desain"
                       type="email"
-                      placeholder="name@example.com"
+                      placeholder="alexsteven@example.com"
+                      size="sm"
                     />
                   </Form.Group>
 
@@ -265,6 +266,7 @@ export default function Maps({reports}) {
                       id="damageType"
                       name="damageType"
                       required
+                      size="sm"
                     >
                       <option>Pilih Jenis Kerusakan</option>
                       <option value="Kerusakan Tinggi">Kerusakan Tinggi</option>
@@ -300,6 +302,7 @@ export default function Maps({reports}) {
                       required
                       id="locationLat"
                       name="locationLat"
+                      size="sm"
                     />
                   </Form.Group>
 
@@ -317,6 +320,7 @@ export default function Maps({reports}) {
                       required
                       id="locationLng"
                       name="locationLng"
+                      size="sm"
                     />
                   </Form.Group>
 
@@ -334,10 +338,11 @@ export default function Maps({reports}) {
                       required
                       name="message"
                       id="message"
+                      size="sm"
                     />
                   </Form.Group>
                   <Button type="submit" variant="success">
-                    Save Changes
+                    Laporkan Jalan
                   </Button>
                 </Form>
               </Col>
@@ -345,11 +350,6 @@ export default function Maps({reports}) {
             </Row>
           </Container>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>
       {/* akhir modal */}
     </>

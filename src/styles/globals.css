@@ -247,7 +247,7 @@ h1 {
 }
 .row-container-maps .col-maps-left {
   padding: 15px;
-  background-color: #3d8361;
+  background-color:#4c4c6d;
 }
 
 .row-container-maps .col-maps-right h3 {
@@ -334,19 +334,9 @@ h1 {
 
 /* Modal / POPUP */
 
+
 .input-desain{
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
-  border-bottom: 2px solid #3d8361;
-}
-.input-desain{
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
-  border-bottom: 2px solid #3d8361;
+  border: 1.5px solid #3d8361;
 }
 
 .row-container-maps-modal{
@@ -370,6 +360,8 @@ h1 {
 .col-maps-left-modal p {
  color: #4c4c6d;
  font-size: small;
+ padding-left: 10%;
+ padding-right: 10%;
 }
 
 .icon-modal{
