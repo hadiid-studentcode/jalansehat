@@ -21,6 +21,7 @@
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "leaflet-draw": "^1.0.4",
+    "mdb-react-ui-kit": "^6.1.0",
     "next": "13.4.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",

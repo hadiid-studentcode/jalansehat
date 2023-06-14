@@ -114,12 +114,15 @@ export default function Maps({reports}) {
         <title>JalanSehat | Maps</title>
       </Head>
 
-
       <Container>
         <Row className="row-container-maps">
           <Col xs={12} sm={12} md={12} xxl={8} className="col-maps-left">
             <div>
-              <Position onPositionChange1={handlePositionChange1} onReport={report} onData={data} />
+              <Position
+                onPositionChange1={handlePositionChange1}
+                onReport={report}
+                onData={data}
+              />
             </div>
           </Col>
           <Col xs={12} sm={12} md={12} xxl={4} className="col-maps-right">
@@ -138,17 +141,38 @@ export default function Maps({reports}) {
             </p>
             <p>Keterangan :</p>
 
-            <p className="mark-color" style={Object.assign({color: '#CD1818'})}><i className='bi bi-pin-map-fill'></i> Kerusakan Tinggi</p>
-            <p className="mark-color" style={Object.assign({color: '#F49D1A'})}><i className='bi bi-pin-map-fill'></i> Kerusakan Menengah</p>
-            <p className="mark-color" style={Object.assign({color: '#3E6D9C'})}><i className='bi bi-pin-map-fill'></i> Sedang Perbaikan</p>
-            <p className="mark-color" style={Object.assign({color: '#5D9C59'})}><i className='bi bi-pin-map-fill'></i> Kondisi Jalan Baik</p>
+            <p
+              className="mark-color"
+              style={Object.assign({color: '#CD1818'})}
+            >
+              <i className="bi bi-pin-map-fill"></i> Kerusakan Tinggi
+            </p>
+            <p
+              className="mark-color"
+              style={Object.assign({color: '#F49D1A'})}
+            >
+              <i className="bi bi-pin-map-fill"></i> Kerusakan Menengah
+            </p>
+            <p
+              className="mark-color"
+              style={Object.assign({color: '#3E6D9C'})}
+            >
+              <i className="bi bi-pin-map-fill"></i> Sedang Perbaikan
+            </p>
+            <p
+              className="mark-color"
+              style={Object.assign({color: '#5D9C59'})}
+            >
+              <i className="bi bi-pin-map-fill"></i> Kondisi Jalan Baik
+            </p>
 
-
-            <Button className="btn-laporan" onClick={handleShow}>Laporkan Jalan<i className='icon-btn bi-envelope-exclamation-fill'></i></Button>
+            <Button className="btn-laporan" onClick={handleShow}>
+              Laporkan Jalan
+              <i className="icon-btn bi-envelope-exclamation-fill"></i>
+            </Button>
           </Col>
         </Row>
       </Container>
-
 
       {/* modal */}
       <Modal show={show} onHide={handleClose} size="xl">
@@ -158,51 +182,115 @@ export default function Maps({reports}) {
         <Modal.Body>
           <Container>
             <Row className="row-container-maps">
-              <Col xs={12} sm={12} md={12} xxl={6} className="col-maps-left">
-
-              </Col>
+              {/* <Col
+                xs={12}
+                sm={12}
+                md={12}
+                xxl={6}
+                className="col-maps-left"
+              ></Col> */}
 
               <Col xs={12} sm={12} md={12} xxl={6} className="col-maps-right">
-                <Form onSubmit={handleSendReport} method='POST'>
-                  <Form.Group className="mb-3" id="exampleForm.ControlTextarea1">
-                    <Form.Label>Nama Pelapor
-                    </Form.Label>
-                    <Form.Control type="text" onChange={handleChange} placeholder="Nama Pelapor" required name='name' id='name' />
+                <Form onSubmit={handleSendReport} method="POST">
+                  <Form.Group
+                    className="mb-3"
+                    id="exampleForm.ControlTextarea1"
+                  >
+                    <Form.Label>Nama Pelapor</Form.Label>
+                    <Form.Control
+                      className="input-desain"
+                      type="text"
+                      onChange={handleChange}
+                      placeholder="Nama Pelapor"
+                      required
+                      name="name"
+                      id="name"
+                    />
                   </Form.Group>
 
                   <Form.Group className="mb-3" id="exampleForm.ControlInput1">
                     <Form.Label>Jenis Kerusakan</Form.Label>
-                    <Form.Select aria-label="Default select example" onChange={handleChange} id='damageType' name='damageType' required>
+                    <Form.Select
+                      className="input-desain"
+                      aria-label="Default select example"
+                      onChange={handleChange}
+                      id="damageType"
+                      name="damageType"
+                      required
+                    >
                       <option>Pilih Jenis Kerusakan</option>
                       <option value="Kerusakan Tinggi">Kerusakan Tinggi</option>
                       <option value="Kerusakan Sedang">Kerusakan Sedang</option>
                       <option value="Sedang Perbaikan">Sedang Perbaikan</option>
-                      <option value="Kondisi Jalan Bagus">Kondisi Jalan Bagus</option>
+                      <option value="Kondisi Jalan Bagus">
+                        Kondisi Jalan Bagus
+                      </option>
                     </Form.Select>
                   </Form.Group>
 
                   <Form.Group controlId="formFileSm" className="mb-3">
-                    <Form.Label>Small file input example</Form.Label>
-                    <Form.Control type="file" size="sm" name='image' />
+                    <Form.Label>Masukkan Gambar Jalan</Form.Label>
+                    <Form.Control
+                      className="input-desain"
+                      type="file"
+                      size="sm"
+                      name="image"
+                    />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" id="exampleForm.ControlTextarea1">
-                    <Form.Label>Titik Lokasi Latitude
-                    </Form.Label>
-                    <Form.Control type="text" disabled value={Latitude} onChange={handleChange} required id='locationLat' name='locationLat' />
+                  <Form.Group
+                    className="mb-3"
+                    id="exampleForm.ControlTextarea1"
+                  >
+                    <Form.Label>Titik Lokasi Latitude</Form.Label>
+                    <Form.Control
+                      className="input-desain"
+                      type="text"
+                      disabled
+                      value={Latitude}
+                      onChange={handleChange}
+                      required
+                      id="locationLat"
+                      name="locationLat"
+                    />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" id="exampleForm.ControlTextarea1">
-                    <Form.Label>Titik Lokasi Longitude
-                    </Form.Label>
-                    <Form.Control type="text" disabled value={Longitude} onChange={handleChange} required id='locationLng' name='locationLng' />
+                  <Form.Group
+                    className="mb-3"
+                    id="exampleForm.ControlTextarea1"
+                  >
+                    <Form.Label>Titik Lokasi Longitude</Form.Label>
+                    <Form.Control
+                      className="input-desain"
+                      type="text"
+                      disabled
+                      value={Longitude}
+                      onChange={handleChange}
+                      required
+                      id="locationLng"
+                      name="locationLng"
+                    />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" id="exampleForm.ControlTextarea1">
+                  <Form.Group
+                    className="mb-3"
+                    id="exampleForm.ControlTextarea1"
+                  >
                     <Form.Label>Isi Laporan</Form.Label>
-                    <Form.Control as="textarea" rows={3} onChange={handleChange} placeholder="Silahkan isikan Laporan dengan benar dan valid" required name='message' id='message' />
+                    <Form.Control
+                      className="input-desain"
+                      as="textarea"
+                      rows={3}
+                      onChange={handleChange}
+                      placeholder="Silahkan isikan Laporan dengan benar dan valid"
+                      required
+                      name="message"
+                      id="message"
+                    />
                   </Form.Group>
-                  <Button type='submit' variant="primary">Save Changes</Button>
+                  <Button type="submit" variant="primary">
+                    Save Changes
+                  </Button>
                 </Form>
               </Col>
             </Row>
@@ -210,13 +298,11 @@ export default function Maps({reports}) {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-              Close
+            Close
           </Button>
         </Modal.Footer>
       </Modal>
       {/* akhir modal */}
-
-
     </>
   );
 }
