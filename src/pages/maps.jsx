@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable camelcase */
 import {supabase} from '../../lib/supabaseClient';
 import Position from '@/Components/Position';
@@ -264,6 +265,7 @@ export default function Maps({reports}) {
                       placeholder="alexsteven@example.com"
                       size="sm"
                       name="email"
+                      required
                     />
                   </Form.Group>
 
@@ -293,6 +295,7 @@ export default function Maps({reports}) {
                       type="file"
                       size="sm"
                       name="image"
+                      required
                     />
                   </Form.Group>
 
@@ -311,6 +314,7 @@ export default function Maps({reports}) {
                       id="locationLat"
                       name="locationLat"
                       size="sm"
+
                     />
                   </Form.Group>
 
