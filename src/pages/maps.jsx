@@ -72,7 +72,9 @@ export default function Maps({reports}) {
     try {
       const compressedResult = await new Promise((resolve) => {
         new Compressor(imageReport, {
-          quality: NaN,
+          quality: 0.8,
+          width: 500,
+          height: 500,
           success: (compressed) => {
             resolve(compressed);
           },
