@@ -403,7 +403,8 @@ color: #4c4c6d;
 
 .img-maps {
   width: 100%;
-  height: auto;
+  height: 200px; /* Atur tinggi gambar sesuai kebutuhan */
+  object-fit: cover; /* Mempertahankan rasio aspek gambar */
   border-radius: 5px;
   margin-bottom: 10px;
 }
