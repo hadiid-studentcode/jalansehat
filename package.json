@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
     "@p5-wrapper/next": "^0.2.0",
     "@p5-wrapper/react": "^4.2.0",
     "@supabase/auth-helpers-nextjs": "^0.7.2",
