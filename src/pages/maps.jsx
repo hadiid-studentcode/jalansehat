@@ -199,14 +199,30 @@ export default function Maps({reports}) {
         </Modal.Header>
         <Modal.Body>
           <Container>
-            <Row className="row-container-maps">
-              {/* <Col
-                xs={12}
-                sm={12}
-                md={12}
-                xxl={6}
-                className="col-maps-left"
-              ></Col> */}
+            <Row className="row-container-maps-modal">
+              <Col xs={12} sm={12} md={12} xxl={6}className="col-maps-left-modal">
+                <img
+                  src="./assets/img/modal-img.svg"
+                  className="img-fluid"
+                  alt="Image"
+                />
+                <h4>Laporakan Jalan Rusak</h4>
+                <p><b>Hi. Yuk !</b> Bantu Kita untuk membuat laporan tentang kondisi jalan diwilayah anda saat ini. Karena dengan Laporan ini kita dapat mengetahui kondisi jalan sebelum kita berkendara agar perjalanan menjadi aman dan nyaman.</p>
+                <div className="sosial-media-modal">
+                  <a href="#">
+                    <i className="icon-modal bi bi-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i className="icon-modal bi bi-facebook"></i>
+                  </a>
+                  <a href="#">
+                    <i className="icon-modal bi bi-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i className="icon-modal bi bi-linkedin"></i>
+                  </a>
+                </div>
+              </Col>
 
               <Col xs={12} sm={12} md={12} xxl={6} className="col-maps-right">
                 <Form onSubmit={handleSendReport} method="POST">
@@ -316,6 +332,7 @@ export default function Maps({reports}) {
                   </Button>
                 </Form>
               </Col>
+
             </Row>
           </Container>
         </Modal.Body>

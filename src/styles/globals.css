@@ -349,7 +349,31 @@ h1 {
   border-bottom: 2px solid #3d8361;
 }
 
-.img-bg-modal{
-  width: 100%;
-  position: absolute;
+.row-container-maps-modal{
+  align-items: center;
+  justify-content: center;
+}
+
+.col-maps-left-modal{
+  text-align: center;
+}
+.col-maps-left-modal img{
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.col-maps-left-modal h4 {
+  color: #3d8361;
+  font-weight: 600;
+}
+
+.col-maps-left-modal p {
+ color: #4c4c6d;
+ font-size: small;
+}
+
+.icon-modal{
+  color: #3d8361;
+  font-size: 20px;
+  padding: 15px;
 }
