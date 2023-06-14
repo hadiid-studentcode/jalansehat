@@ -108,11 +108,13 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
             icon={getIconByDamageType(r.jenisKerusakan)}
           >
             <Popup>
-              <Card style={{width: '18rem'}}>
+              <Card>
                 {r.foto && (
                   <Card.Img
                     variant="top"
                     src={`https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/${r.foto}`}
+                    height="300px"
+                  
                   />
                 )}
                 <Card.Body>
