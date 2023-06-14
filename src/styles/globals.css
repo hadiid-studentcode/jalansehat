@@ -344,13 +344,21 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+.adventage-desc h4{
+  color: #3d8361;
+}
 
+.adventage-desc p{
+color: #4c4c6d;
+}
 /* Modal / POPUP */
 
 
 
 .input-desain{
   border: 1.5px solid #3d8361;
+  color: #4c4c6d;
+  border-radius: 0;
 }
 
 .row-container-maps-modal{
@@ -382,4 +390,19 @@ h1 {
   color: #3d8361;
   font-size: 20px;
   padding: 15px;
+}
+
+.label-modal{
+  color: #3d8361;
+}
+.input-desain.titik-lokasi{
+  background: #2f946347;
+  border: none;
+}
+.btn-modal{
+  border-radius: 0;
+  margin-bottom: 13px;
+}
+.btn-modal:hover{
+  background: #4c4c6d;
 }

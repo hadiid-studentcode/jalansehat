@@ -208,20 +208,6 @@ export default function Maps({reports}) {
                 />
                 <h4>Laporakan Jalan Rusak</h4>
                 <p><b>Yuk !</b> Bantu Kita untuk membuat laporan tentang kondisi jalan diwilayah anda saat ini. Karena dengan Laporan ini kita dapat mengetahui kondisi jalan sebelum kita berkendara agar perjalanan menjadi aman dan nyaman.</p>
-                {/* <div className="sosial-media-modal">
-                  <a href="#">
-                    <i className="icon-modal bi bi-twitter"></i>
-                  </a>
-                  <a href="#">
-                    <i className="icon-modal bi bi-facebook"></i>
-                  </a>
-                  <a href="#">
-                    <i className="icon-modal bi bi-instagram"></i>
-                  </a>
-                  <a href="#">
-                    <i className="icon-modal bi bi-linkedin"></i>
-                  </a>
-                </div> */}
               </Col>
 
 
@@ -231,7 +217,7 @@ export default function Maps({reports}) {
                     className="mb-3"
                     id="exampleForm.ControlTextarea1"
                   >
-                    <Form.Label>Nama Pelapor</Form.Label>
+                    <Form.Label className='label-modal'>Nama Pelapor</Form.Label>
                     <Form.Control
                       className="input-desain"
                       type="text"
@@ -248,7 +234,7 @@ export default function Maps({reports}) {
                     className="mb-3"
                     controlId="exampleForm.ControlInput1"
                   >
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label className='label-modal'>Email address</Form.Label>
                     <Form.Control
                       className="input-desain"
                       type="email"
@@ -258,7 +244,7 @@ export default function Maps({reports}) {
                   </Form.Group>
 
                   <Form.Group className="mb-3" id="exampleForm.ControlInput1">
-                    <Form.Label>Jenis Kerusakan</Form.Label>
+                    <Form.Label className='label-modal'>Jenis Kerusakan</Form.Label>
                     <Form.Select
                       className="input-desain"
                       aria-label="Default select example"
@@ -272,14 +258,12 @@ export default function Maps({reports}) {
                       <option value="Kerusakan Tinggi">Kerusakan Tinggi</option>
                       <option value="Kerusakan Sedang">Kerusakan Sedang</option>
                       <option value="Sedang Perbaikan">Sedang Perbaikan</option>
-                      <option value="Kondisi Jalan Bagus">
-                        Kondisi Jalan Bagus
-                      </option>
+                      <option value="Kondisi Jalan Bagus">Kondisi Jalan Bagus</option>
                     </Form.Select>
                   </Form.Group>
 
                   <Form.Group controlId="formFileSm" className="mb-3">
-                    <Form.Label>Masukkan Gambar Jalan</Form.Label>
+                    <Form.Label className='label-modal'>Masukkan Gambar Jalan</Form.Label>
                     <Form.Control
                       className="input-desain"
                       type="file"
@@ -292,9 +276,9 @@ export default function Maps({reports}) {
                     className="mb-3"
                     id="exampleForm.ControlTextarea1"
                   >
-                    <Form.Label>Titik Lokasi Latitude</Form.Label>
+                    <Form.Label className='label-modal'>Titik Lokasi Latitude</Form.Label>
                     <Form.Control
-                      className="input-desain"
+                      className="input-desain titik-lokasi"
                       type="text"
                       disabled
                       value={Latitude}
@@ -310,9 +294,9 @@ export default function Maps({reports}) {
                     className="mb-3"
                     id="exampleForm.ControlTextarea1"
                   >
-                    <Form.Label>Titik Lokasi Longitude</Form.Label>
+                    <Form.Label className='label-modal'>Titik Lokasi Longitude</Form.Label>
                     <Form.Control
-                      className="input-desain"
+                      className="input-desain titik-lokasi"
                       type="text"
                       disabled
                       value={Longitude}
@@ -328,7 +312,7 @@ export default function Maps({reports}) {
                     className="mb-3"
                     id="exampleForm.ControlTextarea1"
                   >
-                    <Form.Label>Isi Laporan</Form.Label>
+                    <Form.Label className='label-modal'>Isi Laporan</Form.Label>
                     <Form.Control
                       className="input-desain"
                       as="textarea"
@@ -341,7 +325,7 @@ export default function Maps({reports}) {
                       size="sm"
                     />
                   </Form.Group>
-                  <Button type="submit" variant="success">
+                  <Button type="submit" className='btn-modal' variant="success">
                     Laporkan Jalan
                   </Button>
                 </Form>
