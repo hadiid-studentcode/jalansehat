@@ -37,7 +37,7 @@ export default function Maps({reports}) {
     if (status === 'SUBSCRIBED') {
       const res = await supabase
           .from('reports')
-          .select('id,jenisKerusakan,latitude,longitude,message,status,foto')
+          .select('id,nama,jenisKerusakan,latitude,longitude,message,status,foto')
           .eq('status', 'diterima');
       setData(res.data);
     }
@@ -242,7 +242,7 @@ export default function Maps({reports}) {
 export async function getServerSideProps() {
   const {data: reports, error} = await supabase
       .from('reports')
-      .select('id,jenisKerusakan,latitude,longitude,message,status,foto')
+      .select('id,nama,jenisKerusakan,latitude,longitude,message,status,foto')
       .eq('status', 'diterima');
 
 
