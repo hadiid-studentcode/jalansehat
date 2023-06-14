@@ -158,6 +158,11 @@ export default function Maps({reports}) {
                     <Form.Control type="text" onChange={handleChange} placeholder="Nama Pelapor" required name='name' id='name' />
                   </Form.Group>
 
+                  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control type="email" placeholder="name@example.com" />
+                  </Form.Group>
+
                   <Form.Group className="mb-3" id="exampleForm.ControlInput1">
                     <Form.Label>Jenis Kerusakan</Form.Label>
                     <Form.Select aria-label="Default select example" onChange={handleChange} id='damageType' name='damageType' required>
@@ -170,7 +175,7 @@ export default function Maps({reports}) {
                   </Form.Group>
 
                   <Form.Group controlId="formFileSm" className="mb-3">
-                    <Form.Label>Small file input example</Form.Label>
+                    <Form.Label>Masukkan Gambar Jalan</Form.Label>
                     <Form.Control type="file" size="sm" />
                   </Form.Group>
 
