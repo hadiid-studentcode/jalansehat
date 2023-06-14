@@ -393,3 +393,36 @@ color: #4c4c6d;
 .btn-modal:hover{
   background: #4c4c6d;
 }
+
+.card-maps {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.img-maps {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.card-body-maps {
+  padding: 0;
+}
+
+.card-body-maps .card-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-body-maps .card-subtitle {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.btn-maps {
+  display: block;
+  width: 100%;
+}
