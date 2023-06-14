@@ -97,6 +97,17 @@ export default function Maps({reports}) {
 
     }
 
+    if (!imageReport) {
+      Swal.fire({
+        title: 'error!',
+        text: 'image not found!',
+        icon: 'question',
+        confirmButtonText: 'okay!',
+      });
+      return;
+    }
+
+
     const {data: insertData, error: insertError} = await supabase
         .from('reports')
         .insert([
