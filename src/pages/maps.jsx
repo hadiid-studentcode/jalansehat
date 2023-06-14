@@ -10,6 +10,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Compressor from 'compressorjs';
 
 export default function Maps({reports}) {
   const [position, setPosition] = useState(null);
@@ -36,7 +37,7 @@ export default function Maps({reports}) {
     if (status === 'SUBSCRIBED') {
       const res = await supabase
           .from('reports')
-          .select('id,jenisKerusakan,latitude,longitude,message,status,foto')
+          .select('id,nama,jenisKerusakan,latitude,longitude,message,status,foto')
           .eq('status', 'diterima');
       setData(res.data);
     }
@@ -68,14 +69,31 @@ export default function Maps({reports}) {
 
     const imageReport = e.target.elements.image.files[0];
 
-    const {data: uploadData, error: uploadError} = await supabase
-        .storage
-        .from('jalanSehat')
-        .upload(`public/${imageReport.name}`, imageReport);
+    try {
+      const compressedResult = await new Promise((resolve) => {
+        new Compressor(imageReport, {
+          quality: 0.8,
+          width: 200,
+          height: 200,
+          success: (compressed) => {
+            resolve(compressed);
+          },
+        });
+      });
 
-    if (uploadError) {
-      console.log(uploadError);
-      return; // Menghentikan eksekusi jika terjadi error pada upload gambar
+      const {data: uploadData, error: uploadError} = await supabase
+          .storage
+          .from('jalanSehat')
+          .upload(`public/${imageReport.name}`, compressedResult);
+
+      if (uploadError) {
+        console.error(uploadError);
+      } else {
+        console.log(uploadData);
+        // Lakukan tindakan lanjutan setelah upload berhasil
+      }
+    } catch (error) {
+      console.error(error);
     }
 
     const {data: insertData, error: insertError} = await supabase
@@ -310,7 +328,7 @@ export default function Maps({reports}) {
 export async function getServerSideProps() {
   const {data: reports, error} = await supabase
       .from('reports')
-      .select('id,jenisKerusakan,latitude,longitude,message,status,foto')
+      .select('id,nama,jenisKerusakan,latitude,longitude,message,status,foto')
       .eq('status', 'diterima');
 
 
