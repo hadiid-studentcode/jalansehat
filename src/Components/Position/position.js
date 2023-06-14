@@ -113,6 +113,7 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
                   <Card.Img className='img-maps'
                     variant="top"
                     src={`https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/${r.foto}`}
+                    height="300px"
                   />
                 )}
                 <Card.Body className='card-body-maps'>
