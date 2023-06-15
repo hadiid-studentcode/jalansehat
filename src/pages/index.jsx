@@ -13,26 +13,33 @@ export default function Home() {
         <title>JalanSehat | Home</title>
       </Head>
 
-      <Container fluid>
-        <Row className="container-row-jumbotron">
-          <Col xs={12} sm={12} md={6} lg={6} className="container-column">
-            <center>
+      <div className='container-jumbotron'>
+        <Container>
+          <Row>
+            <Col className='side-left' >
               <h2 className='text-name'>SELAMAT DATANG DI JALAN SEHAT</h2>
               <p className="text-desc">
                 <b>Jalan Sehat</b> adalah sistem informasi geografis yang
                 menyajikan data spasial mengenai kondisi jalan yang
                 diklasifikasikan berdasarkan tingkat kerusakannya.
               </p>
-            </center>
-          </Col>
-        </Row>
-        <Row>
-          <img
-            src="./assets/img/line.png"
-            className="img-fluid shadow-2-strong pl-5"
-            style={{height: 10}}
-          ></img>
-        </Row>
+
+            </Col>
+            <Col className='side-right'>
+              <img src="./assets/img/home-img.svg" alt="" />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <svg className='gelombang' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#3d8361"
+          fillOpacity="1"
+          d="M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,138.7C672,139,768,181,864,181.3C960,181,1056,139,1152,128C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+        </path>
+      </svg>
+
+      <Container fluid>
         <center>
           <h1 className="header-video">Berawal dari Berbagai Laporan</h1>
           <p className="p-video-desc">

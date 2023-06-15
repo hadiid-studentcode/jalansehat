@@ -118,21 +118,18 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
                   <Card.Img className='img-maps'
                     variant="top"
                     src={`https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/${r.foto}`}
-                    height="300px"
                   />
                 )}
                 <Card.Body className='card-body-maps'>
-                  <Card.Title>{r.jenisKerusakan} </Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    {r.nama}
-                  </Card.Subtitle>
-                  <Card.Text>{r.message}</Card.Text>
+                  <Card.Title className='jenis-kerusakan'><b>Tingkat : </b>{r.jenisKerusakan} </Card.Title>
+                  <Card.Subtitle className="name-pelapor text-muted"><b>Nama Pelapor :</b> {r.nama}</Card.Subtitle>
+                  <Card.Text className='komentar-kerusakan'><b>Komentar : </b>{r.message}</Card.Text>
                   <Link
                     href={`https://www.google.com/maps/search/?api=1&query=${r.latitude},${r.longitude}`}
                     target="_blank"
                   >
                     {' '}
-                    <Button className='btn-maps' variant="success">Go Location</Button>
+                    <Button className='btn-maps-modal-hasil' variant="success">Go Location</Button>
                   </Link>
                 </Card.Body>
               </Card>
@@ -154,7 +151,7 @@ export default function Position({posisi1, onPositionChange1, onReport, onData})
   };
   return (
     <MapContainer
-      className={style.map}
+      className='map-display'
       center={{lat: -6.17541430761225, lng: 106.82717353105548}}
       zoom={3}
       scrollWheelZoom={false}
