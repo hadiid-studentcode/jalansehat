@@ -48,7 +48,7 @@ export default function Home() {
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
               </Carousel.Item>
               <Carousel.Item>
@@ -57,7 +57,7 @@ export default function Home() {
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
               </Carousel.Item>
               <Carousel.Item>
@@ -66,8 +66,7 @@ export default function Home() {
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
+                  allowFullScreen ></iframe>
               </Carousel.Item>
             </Carousel>
           </div>
