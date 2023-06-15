@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
@@ -32,6 +33,7 @@
     "react-geolocation": "^1.0.4",
     "react-id-swiper": "^4.0.0",
     "react-leaflet": "^4.2.1",
+    "react-router-dom": "^6.13.0",
     "sweetalert2": "^11.7.12",
     "swiper": "^9.4.1",
     "swr": "^2.1.5"

@@ -1,20 +1,9 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function FooterComponent() {
-  const router = useRouter();
-
-  const footerNavigation = [
-    {name: 'Home', Link: '/', classLink: router.pathname === '/' ? 'nav-link active' : 'nav-link'},
-    {name: 'Maps', Link: '/maps', classLink: router.pathname === '/surat-masuk' ? 'nav-link active' : 'nav-link'},
-    {name: 'About Us', Link: '/about', classLink: router.pathname === '/surat-keluar' ? 'nav-link active' : 'nav-link'},
-  ];
-
   return (
     <>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 185">
@@ -32,20 +21,20 @@ export default function FooterComponent() {
                 <h3>Jalan Sehat</h3>
                 <ul>
                   <li>
-                    <a href="#">
+                    <Link href="#">
                       <i className="bi bi-geo-alt-fill"></i> Alamat Jalan Sehat
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">
+                    <Link href="#">
                       <i className="bi bi-whatsapp"></i> +123 123 123
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">
+                    <Link href="#">
                       <i className="bi bi-envelope-fill"></i>
                       {' jalansehat@mail.com '}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -53,10 +42,10 @@ export default function FooterComponent() {
                 <h3>Support</h3>
                 <ul>
                   <li>
-                    <a href="#">Help Center</a>
+                    <Link href="#">Help Center</Link>
                   </li>
                   <li>
-                    <a href="#">Information</a>
+                    <Link href="#">Information</Link>
                   </li>
                 </ul>
               </div>
@@ -64,35 +53,35 @@ export default function FooterComponent() {
                 <h3>About Us</h3>
                 <ul>
                   <li>
-                    <a href="#">
+                    <Link href="#">
                       About Jalan Sehat
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">
+                    <Link href="#">
                       Our Gallery
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">
+                    <Link href="#">
                       For Investor & Donator
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
               <div className="col-lg-3 item social">
-                <a href="#">
+                <Link href="#">
                   <i className="bi bi-twitter"></i>
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="#">
                   <i className="bi bi-facebook"></i>
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="#">
                   <i className="bi bi-instagram"></i>
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="#">
                   <i className="bi bi-linkedin"></i>
-                </a>
+                </Link>
                 <p className="copyright">Jalan Sehat © 2023</p>
               </div>
             </div>

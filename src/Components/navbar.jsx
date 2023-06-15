@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
-import Button from 'react-bootstrap/Button';
+import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -12,8 +12,8 @@ export default function NavbarComponent() {
 
   const navigation = [
     {name: 'Home', Link: '/', classLink: router.pathname === '/' ? 'nav-link active' : 'nav-link'},
-    {name: 'Maps', Link: '/maps', classLink: router.pathname === '/surat-masuk' ? 'nav-link active' : 'nav-link'},
-    {name: 'About Us', Link: '/about', classLink: router.pathname === '/surat-keluar' ? 'nav-link active' : 'nav-link'},
+    {name: 'Maps', Link: '/maps', classLink: router.pathname === '/maps' ? 'nav-link active' : 'nav-link'},
+    {name: 'About Us', Link: '/about', classLink: router.pathname === '/about' ? 'nav-link active' : 'nav-link'},
   ];
 
   return (
@@ -34,8 +34,9 @@ export default function NavbarComponent() {
                 {navigation.map((item) => (
                   <li key={item.name} className="nav-item">
                     <Link
-                      className={`${item.classLink} link-item`}
                       href={item.Link}
+                      className={`${item.classLink} link-item`}
+
                     >
                       {item.name}
                     </Link>
@@ -44,10 +45,11 @@ export default function NavbarComponent() {
               </ul>
             </Nav>
           </Navbar.Collapse>
-          <img
+          <Image
             className="flag"
-            src="../assets/img/indonesia.png"
-            height="30"
+            src="/assets/img/indonesia.png"
+            height={30}
+            width={30}
             alt="Logo"
             loading="lazy"
           />
