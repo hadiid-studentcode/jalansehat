@@ -40,12 +40,10 @@ export default function Home() {
             aplikasi berbasis website sebagai sebuah solusi dari berbagai
             permasalah video dibawah ini
           </p>
-          <div className="ctnr-crsl">
+          <div className="ctnr-crsl-yt">
             <Carousel className="crsl" variant="dark">
               <Carousel.Item>
-                <iframe
-                  width="560"
-                  height="315"
+                <iframe className='frame-yt'
                   src="https://www.youtube.com/embed/OeOngPhRyBY"
                   title="YouTube video player"
                   frameBorder="0"
@@ -54,9 +52,7 @@ export default function Home() {
                 ></iframe>
               </Carousel.Item>
               <Carousel.Item>
-                <iframe
-                  width="560"
-                  height="315"
+                <iframe className='frame-yt'
                   src="https://www.youtube.com/embed/WUHDNwvkiOk"
                   title="YouTube video player"
                   frameBorder="0"
@@ -65,9 +61,7 @@ export default function Home() {
                 ></iframe>
               </Carousel.Item>
               <Carousel.Item>
-                <iframe
-                  width="560"
-                  height="315"
+                <iframe className='frame-yt'
                   src="https://www.youtube.com/embed/oWPG2avXVlE"
                   title="YouTube video player"
                   frameBorder="0"
@@ -81,7 +75,7 @@ export default function Home() {
         <div className="advantage">
           <Container>
             <div className="advantage-title">
-              <h2>Keunggulan Jalan Sehat</h2>
+              <h2>Keunggulan Website Jalan Sehat</h2>
             </div>
             <Row>
               <Col lg={6}>

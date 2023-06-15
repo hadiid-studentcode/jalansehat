@@ -30,6 +30,11 @@ body {
 }
 
 /* Index */
+
+.frame-yt{
+  width: 560px;
+  height:315px;
+}
 .adventage-desc {
   padding-left: 30px;
 }
@@ -210,6 +215,10 @@ body {
   margin-top: 20px;
 }
 
+.ctnr-crsl-yt {
+  margin-top: 20px;
+}
+
 .ctnr-crsl h2 {
   margin-top: 100px;
   font-size: 40px;
@@ -349,9 +358,9 @@ margin-left: 25%;
 .adventage-desc p{
 color: #4c4c6d;
 }
+
+
 /* Modal / POPUP */
-
-
 
 .input-desain{
   border: 1.5px solid #3d8361;
