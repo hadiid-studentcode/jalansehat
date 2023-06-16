@@ -24,7 +24,7 @@ const teamsData = [
     description: 'Universitas Muhammadiyah Riau',
     twitter: '',
     github: 'https://github.com/hadiid-studentcode',
-    instagram: '',
+    instagram: 'https://www.instagram.com/hadiidandriy12/',
     lindkedin: 'https://www.linkedin.com/in/hadiid-andri-yulison-984a69200/',
   },
   {
