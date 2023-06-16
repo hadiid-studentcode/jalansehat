@@ -1,5 +1,5 @@
 /* responsive */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 767px) {
       .flag {
         display: none;
       }
@@ -11,19 +11,28 @@
         text-align: center;
       }
 
-      .text-name{
-        font-size: 15px;
-        max-width: 100%;
-        color: #3D8361;
+      .row-home{
+        padding-top: 30px;
+        align-items: center;
       }
-
-      .text-desc{
-        max-width: 100%;
-        color: #4c4c6d;
+      .text-name {
+        margin-top: 10px;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 20px;
         text-align: center;
-        padding: 0;
+      }
+      
+      .text-desc {
+        color: #ffffff;
+        text-align: center;
+        font-size: 10px;
+        max-width: 90%;
       }
 
+      .side-right{
+        display: none;
+      }
       .image-colum-jum{
         margin-top: -90px;
         background: #4c4c6d;
@@ -127,14 +136,21 @@
       
 }
 
-@media screen and (min-width: 651px) {
+@media screen and (min-width: 768px) {
   .col-maps-right img{
   display: none;
   }
+  .side-right{
+    display: none;
+  }
+
 }
 @media screen and (min-width: 1400px) {
   .col-maps-right img{
   display: block;
+  }
+  .side-right{
+    display: block;
   }
 }
  

@@ -22,14 +22,18 @@ body {
   background-color: #3d8361;
   height: auto;
 }
+.row-home{
+  padding-top: 70px;
+  align-items: center;
+}
 .side-right{
-  background-color: #4c4c6d;
   text-align: center;
   margin: 0;
   padding: 0;
 }
 .side-left{
-  background:#00000374
+  margin: 0;
+  padding: 0;
 }
 .side-right img {
  width: 60%;
@@ -40,17 +44,23 @@ body {
   color: #ffffff;
   font-weight: 700;
   font-size: 30px;
+  text-align: center;
 }
 
 .text-desc {
   color: #ffffff;
+  text-align: center;
+  max-width: 80%;
 }
-
+.text-name-tech{
+  color: #3d8361;
+  font-weight: 600;
+}
 .container-jumbotron row col{
   background: #4c4c6d;
 }
 .gelombang{
-  margin-top: 10px;
+  margin-top: -1px;
 }
 .frame-yt{
   width: 560px;
@@ -90,6 +100,9 @@ body {
   margin-bottom: 12px;
   font-weight: bold;
   font-size: 16px;
+}
+.footer-svg{
+  margin-top: 6px;
 }
 
 .footer-clean ul {

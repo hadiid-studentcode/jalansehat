@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function Home() {
   return (
@@ -15,15 +17,17 @@ export default function Home() {
 
       <div className='container-jumbotron'>
         <Container>
-          <Row>
+          <Row className='row-home'>
             <Col className='side-left' >
               <h2 className='text-name'>SELAMAT DATANG DI JALAN SEHAT</h2>
-              <p className="text-desc">
-                <b>Jalan Sehat</b> adalah sistem informasi geografis yang
+              <center>
+                <p className="text-desc">
+                  <b>Jalan Sehat</b> adalah sistem informasi geografis yang
                 menyajikan data spasial mengenai kondisi jalan yang
                 diklasifikasikan berdasarkan tingkat kerusakannya.
-              </p>
-
+                </p>
+              </center>
+              {/* <Button className='btn-selengkapnya'>Yuk ! Bantu Laporkan <i className='bi-box-arrow-in-right'></i></Button> */}
             </Col>
             <Col className='side-right'>
               <img src="./assets/img/home-img.svg" alt="" />
@@ -201,7 +205,7 @@ export default function Home() {
         </div>
         <center>
           <div className="ctnr-crsl">
-            <h2 className="text-name">Our Tech</h2>
+            <h2 className="text-name-tech">Our Tech</h2>
             <Carousel className="crsl" variant="dark">
               <Carousel.Item>
                 <img

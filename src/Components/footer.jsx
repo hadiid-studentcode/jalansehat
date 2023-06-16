@@ -6,7 +6,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 export default function FooterComponent() {
   return (
     <>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 185">
+      <svg xmlns="http://www.w3.org/2000/svg" className='footer-svg' viewBox="0 0 1440 185">
         <path
           fill="#3d8361"
           fillOpacity="1"
