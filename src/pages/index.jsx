@@ -22,32 +22,38 @@ export default function Home() {
         <title>JalanSehat | Home</title>
       </Head>
 
-      <div className='container-jumbotron'>
+      <div className="container-jumbotron">
         <Container>
-          <Row className='row-home'>
-            <Col className='side-left' >
-              <h2 className='text-name'>SELAMAT DATANG DI JALAN SEHAT</h2>
+          <Row className="row-home">
+            <Col className="side-left">
+              <h2 className="text-name">SELAMAT DATANG DI JALAN SEHAT</h2>
               <center>
                 <p className="text-desc">
                   <b>Jalan Sehat</b> adalah sistem informasi geografis yang
-                menyajikan data spasial mengenai kondisi jalan yang
-                diklasifikasikan berdasarkan tingkat kerusakannya.
+                  menyajikan data spasial mengenai kondisi jalan yang
+                  diklasifikasikan berdasarkan tingkat kerusakannya.
                 </p>
+                <Button className="btn-selengkapnya">
+                  Yuk ! Bantu Laporkan <i className="bi-box-arrow-in-right"></i>
+                </Button>
               </center>
-              {/* <Button className='btn-selengkapnya'>Yuk ! Bantu Laporkan <i className='bi-box-arrow-in-right'></i></Button> */}
             </Col>
-            <Col className='side-right'>
+            <Col className="side-right">
               <img src="./assets/img/home-img.svg" alt="" />
             </Col>
           </Row>
         </Container>
       </div>
-      <svg className='gelombang' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <svg
+        className="gelombang"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
         <path
           fill="#3d8361"
           fillOpacity="1"
-          d="M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,138.7C672,139,768,181,864,181.3C960,181,1056,139,1152,128C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-        </path>
+          d="M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,138.7C672,139,768,181,864,181.3C960,181,1056,139,1152,128C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+        ></path>
       </svg>
 
       <Container fluid>
@@ -61,7 +67,8 @@ export default function Home() {
           <div className="ctnr-crsl-yt">
             <Carousel className="crsl" variant="dark">
               <Carousel.Item>
-                <iframe className='frame-yt'
+                <iframe
+                  className="frame-yt"
                   src="https://www.youtube.com/embed/OeOngPhRyBY"
                   title="YouTube video player"
                   frameBorder="0"
@@ -70,7 +77,8 @@ export default function Home() {
                 ></iframe>
               </Carousel.Item>
               <Carousel.Item>
-                <iframe className='frame-yt'
+                <iframe
+                  className="frame-yt"
                   src="https://www.youtube.com/embed/WUHDNwvkiOk"
                   title="YouTube video player"
                   frameBorder="0"
@@ -79,19 +87,25 @@ export default function Home() {
                 ></iframe>
               </Carousel.Item>
               <Carousel.Item>
-                <iframe className='frame-yt'
+                <iframe
+                  className="frame-yt"
                   src="https://www.youtube.com/embed/oWPG2avXVlE"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen ></iframe>
+                  allowFullScreen
+                ></iframe>
               </Carousel.Item>
             </Carousel>
           </div>
         </center>
         <div className="advantage">
           <Container>
-            <div className="advantage-title" data-aos="zoom-in-up" data-aos-duration="1000">
+            <div
+              className="advantage-title"
+              data-aos="zoom-in-up"
+              data-aos-duration="1000"
+            >
               <h2>Keunggulan Website Jalan Sehat</h2>
             </div>
             <Row data-aos-delay="300">
@@ -151,7 +165,12 @@ export default function Home() {
                   </div>
                 </Card>
               </Col>
-              <Col className="mb-20" lg={6} data-aos="zoom-in-up" data-aos-duration="1000">
+              <Col
+                className="mb-20"
+                lg={6}
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
+              >
                 <Card
                   className="mt-4 mb-20"
                   style={{

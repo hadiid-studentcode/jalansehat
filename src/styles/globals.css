@@ -186,6 +186,11 @@ body {
   background-image: url(/public/assets/img/maps.png) no-repe;
 }
 
+.btn-selengkapnya{
+  background-color: #4c4c6d;
+  border: none;
+}
+
 /* Divider */
 .divider {
   position: relative;
@@ -432,34 +437,34 @@ color: #4c4c6d;
 }
 .btn-modal{
   border-radius: 0;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 }
 .btn-modal:hover{
   background: #4c4c6d;
 }
 .jenis-kerusakan{
-  font-size: 9px;
+  font-size: 14px;
   color: #4c4c6d;
 }
 .name-pelapor{
-  font-size: 9px;
+  font-size: 14px;
   color: #4c4c6d;
   font-weight: 600;
 }
 .card-maps {
   border: none;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
 }
 .komentar-kerusakan{
-  font-size: 9px;
+  font-size: 14px;
   color: #4c4c6d;
-  font-weight: 600;
-  margin-top: -40px;
+  font-weight: 400;
+  margin-top: -30px;
 }
 .btn-maps-modal-hasil{
   background-color: #3d8361;
-  font-size: 8px;
+  font-size: 14px;
   border: none;
   border-radius: 0;
 }
