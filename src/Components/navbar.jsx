@@ -11,9 +11,9 @@ export default function NavbarComponent() {
   const router = useRouter();
 
   const navigation = [
-    {name: 'Home', Link: '/', classLink: router.pathname === '/' ? 'nav-link active' : 'nav-link'},
-    {name: 'Maps', Link: '/maps', classLink: router.pathname === '/maps' ? 'nav-link active' : 'nav-link'},
-    {name: 'About Us', Link: '/about', classLink: router.pathname === '/about' ? 'nav-link active' : 'nav-link'},
+    {name: 'Beranda', Link: '/', classLink: router.pathname === '/' ? 'nav-link active' : 'nav-link'},
+    {name: 'Laporkan', Link: '/maps', classLink: router.pathname === '/maps' ? 'nav-link active' : 'nav-link'},
+    {name: 'Tentang Kami', Link: '/about', classLink: router.pathname === '/about' ? 'nav-link active' : 'nav-link'},
   ];
 
   return (
