@@ -230,7 +230,7 @@ export default function Home() {
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="./assets/img/react.png"
+                  src="./assets/img/react-comp.png"
                   alt="Second slide"
                 />
                 <Carousel.Caption className="caption-text">
