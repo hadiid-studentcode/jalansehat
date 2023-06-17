@@ -7,8 +7,15 @@ import Card from 'react-bootstrap/Card';
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import React, {useEffect} from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <Head>
@@ -84,11 +91,11 @@ export default function Home() {
         </center>
         <div className="advantage">
           <Container>
-            <div className="advantage-title">
+            <div className="advantage-title" data-aos="zoom-in-up" data-aos-duration="1000">
               <h2>Keunggulan Website Jalan Sehat</h2>
             </div>
-            <Row>
-              <Col lg={6}>
+            <Row data-aos-delay="300">
+              <Col lg={6} data-aos="zoom-in-up" data-aos-duration="1000">
                 <Card
                   className="mt-4 mb-20"
                   style={{
@@ -116,7 +123,7 @@ export default function Home() {
                   </div>
                 </Card>
               </Col>
-              <Col lg={6}>
+              <Col lg={6} data-aos="zoom-in-up" data-aos-duration="1000">
                 <Card
                   className="mt-4 mb-20"
                   style={{
@@ -144,7 +151,7 @@ export default function Home() {
                   </div>
                 </Card>
               </Col>
-              <Col className="mb-20" lg={6}>
+              <Col className="mb-20" lg={6} data-aos="zoom-in-up" data-aos-duration="1000">
                 <Card
                   className="mt-4 mb-20"
                   style={{
@@ -172,7 +179,7 @@ export default function Home() {
                   </div>
                 </Card>
               </Col>
-              <Col lg={6}>
+              <Col lg={6} data-aos="zoom-in-up" data-aos-duration="1000">
                 <Card
                   className="mt-4 mb-20"
                   style={{
