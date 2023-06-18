@@ -195,6 +195,11 @@ body {
   color: #4c4c6d;
 }
 
+.btn-selengkapnya:hover{
+  background-color: #ffffff;
+  color: #4c4c6d;
+}
+
 /* Divider */
 .divider {
   position: relative;

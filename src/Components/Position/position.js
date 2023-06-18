@@ -96,6 +96,7 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
     const dbDate = new Date(date);
     const timediff = currentDate.getTime() - dbDate.getTime();
     const minutesDiff = Math.floor(timediff / (1000 * 60));
+    const hoursDiff = Math.floor(timediff / (1000 * 60 * 60));
     const monthsDiff = Math.floor(timediff / (1000 * 60 * 60 * 24 * 30));
     const yearsDiff = Math.floor(timediff / (1000 * 60 * 60 * 24 * 365));
 
@@ -103,6 +104,8 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
       return 'Baru Saja';
     } else if (minutesDiff < 60) {
       return `${minutesDiff} menit yang lalu`;
+    } else if (hoursDiff < 24) {
+      return `${hoursDiff} jam yang lalu`;
     } else if (monthsDiff < 12) {
       return `${monthsDiff} bulan yang lalu`;
     } else {
