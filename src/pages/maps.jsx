@@ -347,7 +347,6 @@ export default function Maps({reports}) {
                     <Form.Control
                       className="input-desain titik-lokasi"
                       type="text"
-                      disabled
                       value={Latitude}
                       onChange={handleChange}
                       required
@@ -367,7 +366,6 @@ export default function Maps({reports}) {
                     <Form.Control
                       className="input-desain titik-lokasi"
                       type="text"
-                      disabled
                       value={Longitude}
                       onChange={handleChange}
                       required
