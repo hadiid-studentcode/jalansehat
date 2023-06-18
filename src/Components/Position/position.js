@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 /* eslint-disable react/jsx-key */
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility';
@@ -46,7 +47,6 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
     map.locate();
   }, []);
 
-
   // Definisikan ikon marker sesuai kebutuhan Anda
   const highDamage = divIcon({
     className: 'custom-icon',
@@ -91,6 +91,25 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
     }
   };
 
+  const timeDiff = (date) => {
+    const currentDate = new Date();
+    const dbDate = new Date(date);
+    const timediff = currentDate.getTime() - dbDate.getTime();
+    const minutesDiff = Math.floor(timediff / (1000 * 60));
+    const monthsDiff = Math.floor(timediff / (1000 * 60 * 60 * 24 * 30));
+    const yearsDiff = Math.floor(timediff / (1000 * 60 * 60 * 24 * 365));
+
+    if (minutesDiff === 0) {
+      return 'Baru Saja';
+    } else if (minutesDiff < 60) {
+      return `${minutesDiff} menit yang lalu`;
+    } else if (monthsDiff < 12) {
+      return `${monthsDiff} bulan yang lalu`;
+    } else {
+      return `${yearsDiff} tahun yang lalu`;
+    }
+  };
+
   return position === null || positionNow === null ? null : (
     <>
       <LayerGroup>
@@ -113,23 +132,37 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
             icon={getIconByDamageType(r.jenisKerusakan)}
           >
             <Popup>
-              <Card className='card-maps'>
+              <Card className="card-maps">
                 {r.foto && (
-                  <Card.Img className='img-maps'
+                  <Card.Img
+                    className="img-maps"
                     variant="top"
                     src={`https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/${r.foto}`}
                   />
                 )}
-                <Card.Body className='card-body-maps'>
-                  <Card.Title className='jenis-kerusakan'><b>Tingkat : </b>{r.jenisKerusakan} </Card.Title>
-                  <Card.Subtitle className="name-pelapor text-muted"><b>Nama Pelapor :</b> {r.nama}</Card.Subtitle>
-                  <Card.Text className='komentar-kerusakan'><b>Komentar : </b>{r.message}</Card.Text>
+                <Card.Body className="card-body-maps">
+                  <Card.Title className="jenis-kerusakan">
+                    <b>Tingkat : </b>
+                    {r.jenisKerusakan}{' '}
+                  </Card.Title>
+                  <Card.Subtitle className="name-pelapor text-muted">
+                    <b>Nama Pelapor :</b> {r.nama}
+                  </Card.Subtitle>
+                  <Card.Text className="komentar-kerusakan">
+                    <b>Komentar : </b>
+                    {r.message}
+                  </Card.Text>
                   <Link
                     href={`https://www.google.com/maps/search/?api=1&query=${r.latitude},${r.longitude}`}
                     target="_blank"
                   >
                     {' '}
-                    <Button className='btn-maps-modal-hasil' variant="success">Go Location</Button>
+                    {/* created at */}
+                    <p>{timeDiff(r.created_at)}</p>
+                    {/* created at */}
+                    <Button className="btn-maps-modal-hasil" variant="success">
+                      Go Location
+                    </Button>
                   </Link>
                 </Card.Body>
               </Card>
@@ -141,7 +174,12 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
   );
 }
 
-export default function Position({posisi1, onPositionChange1, onReport, onData}) {
+export default function Position({
+  posisi1,
+  onPositionChange1,
+  onReport,
+  onData,
+}) {
   const [position, setPosition] = useState(null);
   const [report, setReport] = useState(onReport);
 
@@ -151,7 +189,7 @@ export default function Position({posisi1, onPositionChange1, onReport, onData})
   };
   return (
     <MapContainer
-      className='map-display'
+      className="map-display"
       center={{lat: -6.17541430761225, lng: 106.82717353105548}}
       zoom={3}
       scrollWheelZoom={false}

@@ -39,7 +39,7 @@ export default function Maps({reports}) {
     if (status === 'SUBSCRIBED') {
       const res = await supabase
           .from('reports')
-          .select('id,nama,jenisKerusakan,latitude,longitude,message,status,foto')
+          .select('id,nama,jenisKerusakan,latitude,longitude,message,status,foto,created_at')
           .eq('status', 'diterima');
       setData(res.data);
     }
@@ -116,7 +116,16 @@ export default function Maps({reports}) {
       });
       return;
     }
+    const now = new Date();
+    const dateNow =
 
+        `${now.getFullYear().toString().padStart(4, '0')}-${(now.getMonth() + 1)
+            .toString()
+            .padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')} ${now
+            .getHours()
+            .toString()
+            .padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')} `
+    ;
 
     const {data: insertData, error: insertError} = await supabase
         .from('reports')
@@ -130,6 +139,7 @@ export default function Maps({reports}) {
             message: e.target.elements.message.value,
             status: 'diterima',
             foto: e.target.elements.image.files[0].name,
+            created_at: dateNow,
           },
         ]);
 
@@ -380,7 +390,7 @@ export default function Maps({reports}) {
 export async function getServerSideProps() {
   const {data: reports, error} = await supabase
       .from('reports')
-      .select('id,nama,jenisKerusakan,latitude,longitude,message,status,foto')
+      .select('id,nama,jenisKerusakan,latitude,longitude,message,status,foto,created_at')
       .eq('status', 'diterima');
 
 
