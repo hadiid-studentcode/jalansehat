@@ -10,8 +10,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, {useEffect} from 'react';
+import {useRouter} from 'next/router';
 
 export default function Home() {
+  const router = useRouter();
   useEffect(() => {
     AOS.init();
   }, []);
@@ -33,7 +35,9 @@ export default function Home() {
                   menyajikan data spasial mengenai kondisi jalan yang
                   diklasifikasikan berdasarkan tingkat kerusakannya.
                 </p>
-                <Button className="btn-selengkapnya">
+                <Button className="btn-selengkapnya" onClick={() => {
+                  router.push('/maps');
+                }}>
                   Yuk ! Bantu Laporkan <i className="bi-box-arrow-in-right"></i>
                 </Button>
               </center>
