@@ -41,7 +41,7 @@ Jalan Sehat adalah sistem informasi geografis yang menyajikan data spasial menge
 
 ## Demo
 
-Insert gif or link to demo [jalanSehat](https://jalansehat.vercel.app/)
+link to demo [jalanSehat](https://jalansehat.vercel.app/)
 
 
 ## Support by
