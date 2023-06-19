@@ -63,14 +63,6 @@ export default function Maps({reports}) {
   // modal
   const handleClose = () => setShow(false);
   const handleShow = () => {
-    Swal.fire({
-      title: 'portrait rule!!',
-      text: 'use landscape mode for photo reports.',
-      imageUrl: 'https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/icon/ezgif-3-1cda8f2b80.gif',
-      imageWidth: 150,
-      imageAlt: 'Custom image',
-    });
-
     setShow(true);
   };
   // end modal
@@ -78,6 +70,19 @@ export default function Maps({reports}) {
   // submit form report
   const handleSendReport = async (e) => {
     e.preventDefault();
+
+    // cek kondisi jika titik koordinat tidak ada
+    if (!Latitude || !Longitude) {
+      Swal.fire({
+        title: 'warning!',
+        text: 'Titik Lokasi Jalan Tidak Ada!',
+        icon: 'info',
+        confirmButtonText: 'Tandai Jalan Sekarang',
+      });
+      return addEventListener('click', (e) => {
+        window.location.reload(true);
+      });
+    }
 
     const imageReport = e.target.elements.image.files[0];
 
@@ -316,7 +321,7 @@ export default function Maps({reports}) {
                     >
                       <option>Pilih Jenis Kerusakan</option>
                       <option value="Kerusakan Tinggi">Kerusakan Tinggi</option>
-                      <option value="Kerusakan Sedang">Kerusakan Sedang</option>
+                      <option value="Kerusakan Menengah">Kerusakan Menengah</option>
                       <option value="Sedang Perbaikan">Sedang Perbaikan</option>
                       <option value="Kondisi Jalan Bagus">
                         Kondisi Jalan Bagus
@@ -341,12 +346,10 @@ export default function Maps({reports}) {
                     className="mb-3"
                     id="exampleForm.ControlTextarea1"
                   >
-                    <Form.Label className="label-modal">
-                      Titik Lokasi Latitude
-                    </Form.Label>
+
                     <Form.Control
                       className="input-desain titik-lokasi"
-                      type="text"
+                      type="hidden"
                       value={Latitude}
                       onChange={handleChange}
                       required
@@ -360,12 +363,10 @@ export default function Maps({reports}) {
                     className="mb-3"
                     id="exampleForm.ControlTextarea1"
                   >
-                    <Form.Label className="label-modal">
-                      Titik Lokasi Longitude
-                    </Form.Label>
+
                     <Form.Control
                       className="input-desain titik-lokasi"
-                      type="text"
+                      type="hidden"
                       value={Longitude}
                       onChange={handleChange}
                       required
@@ -416,6 +417,7 @@ export default function Maps({reports}) {
             frameBorder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+
           ></iframe>
         </div>
       </center>
