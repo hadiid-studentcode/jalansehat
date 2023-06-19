@@ -190,6 +190,10 @@ body {
   background-color: #4c4c6d;
   border: none;
 }
+.btn-selengkapnya:hover{
+  background-color: #ffffff;
+  color: #4c4c6d;
+}
 
 .btn-selengkapnya:hover{
   background-color: #ffffff;
@@ -500,4 +504,9 @@ color: #4c4c6d;
 .btn-maps {
   display: block;
   width: 100%;
+}
+
+.caption-tutorial{
+font-size: 20px;
+margin-top: 100px;
 }
