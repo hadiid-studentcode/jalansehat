@@ -23,7 +23,8 @@ import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import {divIcon} from 'leaflet';
 import Swal from 'sweetalert2';
-
+import Badge from 'react-bootstrap/Badge';
+import Form from 'react-bootstrap/Form';
 
 function LocationMarker({posisi, onPositionChange, onReport, onData}) {
   const [position, setPosition] = useState(null);
@@ -179,18 +180,26 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
                   <Card.Subtitle className="name-pelapor text-muted">
                     <b>Nama Pelapor :</b> {r.nama}
                   </Card.Subtitle>
+                  <Badge bg="light" text="dark">
+                    {timeDiff(r.created_at)}
+                  </Badge>
                   <Card.Text className="komentar-kerusakan">
-                    <b>Komentar : </b>
-                    {r.message}
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput1"
+                    >
+                      <Form.Label>
+                        {' '}
+                        <b>Komentar: </b> 
+                      </Form.Label> <br />
+                      <Form.Label>{r.message}</Form.Label>
+                    </Form.Group>
                   </Card.Text>
                   <Link
                     href={`https://www.google.com/maps/search/?api=1&query=${r.latitude},${r.longitude}`}
                     target="_blank"
                   >
                     {' '}
-                    {/* created at */}
-                    <p>{timeDiff(r.created_at)}</p>
-                    {/* created at */}
                     <Button className="btn-maps-modal-hasil" variant="success">
                       Go Location
                     </Button>
