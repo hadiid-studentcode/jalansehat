@@ -35,8 +35,9 @@ Jalan Sehat adalah sistem informasi geografis yang menyajikan data spasial menge
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
+![App Screenshot](https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/images/Jalan%20Sehat%20-%20Halaman%20Beranda.png)
+![App Screenshot](https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/images/Jalan%20Sehat%20-%20Halaman%20Laporkan.png)
+![App Screenshot](https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/images/Jalan%20Sehat%20-%20Halaman%20Tentang%20Kami.png)
 
 
 ## Demo
