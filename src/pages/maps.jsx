@@ -63,14 +63,6 @@ export default function Maps({reports}) {
   // modal
   const handleClose = () => setShow(false);
   const handleShow = () => {
-    Swal.fire({
-      title: 'portrait rule!!',
-      text: 'use landscape mode for photo reports.',
-      imageUrl: 'https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/icon/ezgif-3-1cda8f2b80.gif',
-      imageWidth: 150,
-      imageAlt: 'Custom image',
-    });
-
     setShow(true);
   };
   // end modal
@@ -425,6 +417,7 @@ export default function Maps({reports}) {
             frameBorder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+
           ></iframe>
         </div>
       </center>
