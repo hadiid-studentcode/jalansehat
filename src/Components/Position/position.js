@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces */
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable react/jsx-key */
 import 'leaflet/dist/leaflet.css';
@@ -21,6 +22,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import {divIcon} from 'leaflet';
+import Swal from 'sweetalert2';
+
 
 function LocationMarker({posisi, onPositionChange, onReport, onData}) {
   const [position, setPosition] = useState(null);
@@ -41,11 +44,36 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
 
       map.flyTo(e.latlng, map.getZoom() + 2);
     },
+
   });
 
   useEffect(() => {
+    let timerInterval;
     map.locate();
-  }, []);
+    Swal.fire({
+      title: 'Mencari Lokasi!',
+      html: 'Silahkan Tunggu dalam <b></b> Detik.',
+      timer: 10000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+        const b = Swal.getHtmlContainer().querySelector('b');
+        timerInterval = setInterval(() => {
+          const remainingTimeInMilliseconds = Swal.getTimerLeft();
+          b.textContent = Math.ceil(remainingTimeInMilliseconds / 1000);
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      },
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {
+        map.locate();
+      }
+    });
+  }, [map]);
+
 
   // Definisikan ikon marker sesuai kebutuhan Anda
   const highDamage = divIcon({
