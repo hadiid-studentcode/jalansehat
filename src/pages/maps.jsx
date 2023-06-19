@@ -412,11 +412,12 @@ export default function Maps({reports}) {
         <div className="ctnr-crsl-yt">
           <iframe
             className="frame-yt"
-            src="https://www.youtube.com/embed/svMlooyS5Dc"
+            src="https://grvmucznhugsfcaqgyge.supabase.co/storage/v1/object/public/jalanSehat/public/video/demo.mp4?t=2023-06-19T13%3A01%3A37.693Z"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+            autoPlay
 
           ></iframe>
         </div>
