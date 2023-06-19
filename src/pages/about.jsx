@@ -15,7 +15,7 @@ const teamsData = [
     name: 'Dhiya Annisa Febriza',
     description: 'Universitas Islam Riau',
     twitter: '',
-    github: 'https://github.com/hadiid-studentcode',
+    github: '',
     instagram: 'https://www.instagram.com/annisadhyia/',
     lindkedin: 'https://www.linkedin.com/in/dhiyaannisafebriza/',
   },
