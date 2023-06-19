@@ -259,9 +259,9 @@ export default function Maps({reports}) {
                   className="img-fluid"
                   alt="Image"
                 />
-                <h4>Laporakan Jalan Rusak</h4>
+                <h4>Laporkan Jalan Rusak</h4>
                 <p>
-                  <b>Yuk !</b> Bantu Kita untuk membuat laporan tentang kondisi
+                  <b>Yuk!</b> Bantu Kita untuk membuat laporan tentang kondisi
                   jalan diwilayah anda saat ini. Karena dengan Laporan ini kita
                   dapat mengetahui kondisi jalan sebelum kita berkendara agar
                   perjalanan menjadi aman dan nyaman.
@@ -323,8 +323,8 @@ export default function Maps({reports}) {
                       <option value="Kerusakan Tinggi">Kerusakan Tinggi</option>
                       <option value="Kerusakan Menengah">Kerusakan Menengah</option>
                       <option value="Sedang Perbaikan">Sedang Perbaikan</option>
-                      <option value="Kondisi Jalan Bagus">
-                        Kondisi Jalan Bagus
+                      <option value="Kondisi Jalan Baik">
+                        Kondisi Jalan Baik
                       </option>
                     </Form.Select>
                   </Form.Group>
