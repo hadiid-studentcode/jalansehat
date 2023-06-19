@@ -82,7 +82,7 @@ function LocationMarker({posisi, onPositionChange, onReport, onData}) {
   const getIconByDamageType = (jenisKerusakan) => {
     if (jenisKerusakan === 'Kerusakan Tinggi') {
       return highDamage;
-    } else if (jenisKerusakan === 'Kerusakan Sedang') {
+    } else if (jenisKerusakan === 'Kerusakan Menengah') {
       return intermediateDamage;
     } else if (jenisKerusakan === 'Sedang Perbaikan') {
       return moderateImprovement;
