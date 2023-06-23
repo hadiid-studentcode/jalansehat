@@ -15,7 +15,7 @@ Jalan Sehat adalah sistem informasi geografis yang menyajikan data spasial menge
 - [Haidar Fiki Rabani] [STMIK AMIKOM Surakarta] [github](https://github.com/hadiid-studentcode)  [Instagram](https://www.instagram.com/hadiidandriy12/)  [linkedin](https://www.linkedin.com/in/hadiid-andri-yulison-984a69200/)
 
 
-- [Rais Adi Sutopo] [STMIK AMIKOM Surakarta] [github](https://github.com/raisadisutopo)  [Instagram]()  [linkedin]()
+- [Rais Adi Sutopo] [STMIK AMIKOM Surakarta] [github](https://github.com/raisadisutopo)  [Instagram]()  [linkedin](https://www.linkedin.com/in/r-adi-s-89651a279/)
 
 
 
